@@ -1,4 +1,4 @@
-import ProductItemV from './src/components/ProductItem'
+import ProductItemV from './components/ProductItem'
 
 export default {
   ProductItemV
