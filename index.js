@@ -1,7 +1,7 @@
 import ProductItemV from './components/ProductItem'
 
-export const ProductItemV = ProductItemV
+export const XProductV = ProductItemV
 
 export default {
-  ProductItemV
+  XProductV: ProductItemV
 }
