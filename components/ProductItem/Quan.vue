@@ -19,28 +19,30 @@ export default {
 <style scoped>
 .quan {
   position: relative;
-  font-size: .9em;
   color: white;
-  height: 22px;
-  padding: 0 10px;
+  height: .4em;
+  padding: 0 .2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, #ff9000, #ff5001);
-  border-radius: 5px;
+  background-image: linear-gradient(to right, #F72353, #FD935F);
+  border-radius: .08em;
+}
+.quan span {
+  font-size: .28em;
 }
 .quan::before, .quan::after {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: .16em;
+  height: .16em;
   position: absolute;
-  top: 7px;
-  right: -4px;
+  top: .12em;
+  right: -.08em;
   background: white;
   border-radius: 50%;
 }
 .quan::before {
-  left: -4px;
+  left: -.08em;
 }
 </style>
 

@@ -8,20 +8,20 @@
         <img :src="item.mall_icon" alt="">
         <p>{{item.title}}</p>
       </div>
-      <div class="pi-shop-line">
-        <span v-if="item.shop_name">【{{item.shop_name}}】</span>
-      </div>
-      <div class="pi-price-line">
-        &yen;
-        <big>{{item.discount_price}} </big>
-        <span>&yen;{{item.price}}</span>
+      <div class="flex-r pi-shop-line">
+        <p v-if="item.shop_name">【{{item.shop_name}}】</p>
       </div>
       <div class="flex-r pi-line">
-        <span>销量：{{item.sales}}</span>
+        <div v-if="item.fl_commission" class="gborder gtcolor pi-box"><span>{{item.fl_commission}}</span></div>
+        <span class="pil-txt">销量：{{item.sales}}</span>
+      </div>
+      <div class="flex-r pi-price-line">
+        <div class="pi-price">
+          &yen;
+          <big class="gtcolor">{{item.discount_price}} </big>
+          <span>&yen;{{item.price}}</span>
+        </div>
         <Quan :value="item.amount" />
-      </div>
-      <div class="flex-r pi-line">
-        <div v-if="item.fl_commission" class="pi-box">{{item.fl_commission}}</div>
       </div>
     </div>
   </div>
@@ -57,35 +57,46 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-/* height155 = padding(20) + title(26) + shop(22) + price(50) + line(22) + line(22) */
+/* height280 = padding(40) + title(50) + shop(50) + line(80) + price(60) */
 .pitem {
+  position: relative;
   width: 100%;
-  height: 155px;
-  padding: 10px;
+  height: 2.8em;
+  padding: .2em;
   box-sizing: border-box;
   background: white;
-  margin-bottom: 10px;
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
+.pitem::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 2.6em;
+  right: .2em;
+  height: 1px;
+  background: #E1E1E1;
+  transform: scaleY(.5);
+}
 .pi-left {
-  width: 135px;
-  height: 135px;
+  width: 2.4em;
+  height: 2.4em;
   margin-right: 7px;
 }
 .pi-left img {
   display: block;
   width: 100%;
+  border-radius: .1em;
 }
 .pi-right {
   flex: 1;
   overflow: hidden;
 }
-.pi-title-line { height: 26px; }
+.pi-title-line { height: .5em; }
 .pi-title-line img {
-  width: 17px;
-  height: 17px;
+  width: .3em;
+  height: .3em;
   margin-right: 6px;
   vertical-align: middle;
 }
@@ -94,42 +105,55 @@ export default {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: .28em;
-  color: #323232;
+  font-size: .3em;
+  font-weight: 400;
+  color: black;
+  margin: 0;
 }
 .pi-shop-line {
-  font-size: .26em;
-  color: #151515;
-  height: 22px;
+  color: #333;
+  height: .5em;
+  white-space: nowrap;
   overflow: hidden;
 }
+.pi-shop-line p {
+  font-size: .28em;
+  margin: 0;
+}
 .pi-price-line {
-  font-size: .24em;
   color: #323232;
-  height: 40px;
-  line-height: 40px;
+  height: .6em;
 }
-.pi-price-line big {
+.pi-price {
+  font-size: .24em;
+  color: #F72353;
+}
+.pi-price big {
   font-size: 1.5em;
+  font-weight: bold;
 }
-.pi-price-line span {
+.pi-price span {
   text-decoration: line-through;
   color: #666;
 }
 .pi-line {
-  height: 22px;
-  font-size: .24em;
+  height: .8em;
   color: #666;
 }
+.pil-txt {
+  font-size: .24em;
+}
 .pi-box {
-  font-size: .9em;
-  color: white;
-  height: 18px;
-  padding: 0 7px;
+  color: #F72353;
+  height: .36em;
+  padding: 0 .2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FFA748;
-  border-radius: 3px;
+  border: 1px solid #F72353;
+  border-radius: .2em;
+}
+.pi-box span {
+  font-size: .28em;
 }
 </style>

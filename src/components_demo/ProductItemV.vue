@@ -1,9 +1,16 @@
 <template>
-  <ProductItemV :item="resource" @click="itemClick" />
+  <div>
+    <ProductItemV :item="resource" @click="itemClick" />
+    <ProductItemV :item="resource" @click="itemClick" />
+
+    <pre>
+      &lt;ProductItemV :item="resource" @click="itemClick" /&gt;
+    </pre>
+  </div>
 </template>
 
 <script>
-import ProductItemV from '../../../components/ProductItem';
+import ProductItemV from '../../components/ProductItem';
 
 export default {
   name: 'ProductItemVDemo',
