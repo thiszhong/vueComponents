@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sort-bar @change="onChange" />
+    <x-sort-bar @change="onChange" />
 
     <pre>
       &lt;x-sort-bar ref="mySort" :sorts="arr(option)" @change="onChange" /&gt;
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import SortBar from '../../components/SortBar'
+import { XSortBar } from '../../index'
 
 export default {
   components: {
-    SortBar
+    XSortBar
   },
   methods: {
     onChange (d) {

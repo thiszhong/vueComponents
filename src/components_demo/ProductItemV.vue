@@ -1,21 +1,21 @@
 <template>
   <div>
-    <ProductItemV :item="resource" @click="itemClick" />
-    <ProductItemV :item="resource" @click="itemClick" />
+    <x-product-v :item="resource" @click="itemClick" />
+    <x-product-v :item="resource" @click="itemClick" />
 
     <pre>
-      &lt;ProductItemV :item="resource" @click="itemClick" /&gt;
+      &lt;x-product-v :item="resource" @click="itemClick" /&gt;
     </pre>
   </div>
 </template>
 
 <script>
-import ProductItemV from '../../components/ProductItem';
+import { XProductV } from '../../index';
 
 export default {
   name: 'ProductItemVDemo',
   components: {
-    ProductItemV
+    XProductV
   },
   data() {
     return {

@@ -77,5 +77,6 @@ pre {
 .container {
   flex: 1;
   margin-right: 30px;
+  overflow: hidden;
 }
 </style>

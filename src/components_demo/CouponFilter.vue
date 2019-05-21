@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import XCouponFilter from '../../components/CouponFilter'
+import { XCouponFilter } from '../../index'
 
 export default {
   components: {

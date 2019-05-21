@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'SearchBox',
+  name: 'Search',
   model: {
     prop: 'value',
     event: 'input'
@@ -110,7 +110,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 17px;
+  border-radius: 5px;
   /* border: 1px solid #eee; */
   box-shadow: 0 0 7px #ddd;
   background: white;
@@ -165,13 +165,14 @@ export default {
   top: 0;
 }
 .search-btn {
+  font-size: 16px;
   color: white;
-  width: 50px;
-  margin-left: 7px;
-  height: 30px;
-  background-image: linear-gradient(to right, #FD935F, #F72353);
+  width: 54px;
+  margin-left: 10px;
+  height: 32px;
+  background-image: linear-gradient(to right, #F72353, #FD935F);
   border: 0;
-  border-radius: 15px;
+  border-radius: 5px;
   outline: none;
 }
 .search-btn:active {
