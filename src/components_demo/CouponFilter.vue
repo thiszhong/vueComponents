@@ -1,10 +1,10 @@
 <template>
   <div>
-    <x-coupon-filter :checked="true" @change="onChange" />
+    <coupon-filter :checked="true" @change="onChange" />
     <p style="text-align: right;font-size: 14px;" :style="{color: status ? 'green': '#666'}">isChecked: {{status}}</p>
 
     <pre>
-      &lt;x-coupon-filter :checked="true" @change="onChange" /&gt;
+      &lt;coupon-filter :checked="true" @change="onChange" /&gt;
 
       Props:
         checked: Boolean
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import { XCouponFilter } from '../../index'
+import { CouponFilter } from '../../index'
 
 export default {
   components: {
-    XCouponFilter
+    CouponFilter
   },
   data () {
     return {

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <x-sort-bar @change="onChange" />
+    <sort-bar @change="onChange" />
 
     <pre>
-      &lt;x-sort-bar ref="mySort" :sorts="arr(option)" @change="onChange" /&gt;
+      &lt;sort-bar ref="mySort" :sorts="arr(option)" @change="onChange" /&gt;
 
       Props:
         sorts: default: [
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import { XSortBar } from '../../index'
+import { SortBar } from '../../index'
 
 export default {
   components: {
-    XSortBar
+    SortBar
   },
   methods: {
     onChange (d) {

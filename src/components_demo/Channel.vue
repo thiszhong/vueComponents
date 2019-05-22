@@ -29,10 +29,10 @@
       </div>
     </div>
 
-    <x-channel @click="itemClick" :list="injectList" :horzontal="horzontal" :boxStyle="{padding: '20px'}" />
+    <channel @click="itemClick" :list="injectList" :horzontal="horzontal" :boxStyle="{padding: '20px'}" />
 
     <pre>
-      &lt;x-channel :list="injectList" :horzontal="horzontal" :boxStyle="{padding: '20px'}" /&gt;
+      &lt;channel :list="injectList" :horzontal="horzontal" :boxStyle="{padding: '20px'}" /&gt;
 
       Props:
         list: Array 数据
@@ -45,11 +45,11 @@
 </template>
 
 <script>
-import { XChannel } from '../../index'
+import { Channel } from '../../index'
 
 export default {
   components: {
-    XChannel
+    Channel
   },
   data () {
     return {

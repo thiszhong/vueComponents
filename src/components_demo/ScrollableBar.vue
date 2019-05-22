@@ -1,9 +1,9 @@
 <template>
   <div>
-    <x-scrollable-bar @click="itemClick" :list="list" :index="3" />
+    <scrollable-bar @click="itemClick" :list="list" :index="3" />
 
     <pre>
-      &lt;x-scrollable-bar 
+      &lt;scrollable-bar 
         @click="itemClick" 
         :list="list" 
         :index="3" 
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import { XScrollableBar } from '../../index'
+import { ScrollableBar } from '../../index'
 
 export default {
   components: {
-    XScrollableBar
+    ScrollableBar
   },
   data () {
     return {

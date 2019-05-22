@@ -1,9 +1,9 @@
 <template>
   <div>
-    <x-search v-model="searchValue" :focus="focus" @search="onSearch" />
+    <search v-model="searchValue" :focus="focus" @search="onSearch" />
 
     <pre>
-      &lt;x-search 
+      &lt;search 
         v-model="searchValue(option)" 
         :focus="false(default)" 
         :isPlaceholder="false(default)"
@@ -15,11 +15,11 @@
 </template>
 
 <script>
-import { XSearch } from '../../index'
+import { Search } from '../../index'
 
 export default {
   components: {
-    XSearch
+    Search
   },
   data () {
     return {

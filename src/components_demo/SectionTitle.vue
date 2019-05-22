@@ -1,9 +1,9 @@
 <template>
   <div>
-    <x-section-title title="标题" type="circle" :boxStyle="{background: 'white'}" />
+    <section-title title="标题" type="circle" :boxStyle="{background: 'white'}" />
 
     <pre>
-      &lt;x-section-title title="标题" type="circle" :boxStyle="{background: 'white'}" /&gt;
+      &lt;section-title title="标题" type="circle" :boxStyle="{background: 'white'}" /&gt;
 
       Props:
         title: String
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import { XSectionTitle } from '../../index'
+import { SectionTitle } from '../../index'
 
 export default {
   components: {
-    XSectionTitle
+    SectionTitle
   }
 }
 </script>

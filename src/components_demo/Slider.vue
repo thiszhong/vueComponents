@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-slider ref="mySlider" 
+    <slider ref="mySlider" 
       @click="itemClick"
       :list="list" 
       :autoplay="3000" 
@@ -8,7 +8,7 @@
     />
 
     <pre>
-      &lt;x-slider ref="mySlider" :list="list" :autoplay="3000" /&gt;
+      &lt;slider ref="mySlider" :list="list" :autoplay="3000" /&gt;
 
       Props:
         list: Array: 轮播数据
@@ -23,11 +23,11 @@
   </div>
 </template>
 <script>
-import { XSlider } from '../../index'
+import { Slider } from '../../index'
 
 export default {
   components: {
-    XSlider
+    Slider
   },
   data () {
     return {

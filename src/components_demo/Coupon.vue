@@ -1,6 +1,6 @@
 <template>
   <div>
-    <x-coupon 
+    <coupon 
       @click="click"
       :amount="5" 
       start_time="2019-06-01" end_time="2019-06-02"
@@ -8,7 +8,7 @@
     />
 
     <pre>
-      &lt;x-coupon 
+      &lt;coupon 
         @click="click"
         :amount="5" 
         start_time="2019-06-01" end_time="2019-06-02"
@@ -26,11 +26,11 @@
 </template>
 
 <script>
-import { XCoupon } from '../../index'
+import { Coupon } from '../../index'
 
 export default {
   components: {
-    XCoupon
+    Coupon
   },
   methods: {
     click () {

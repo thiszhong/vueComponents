@@ -1,9 +1,9 @@
 <template>
   <div>
-    <x-image-text @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" />
+    <image-text @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" />
 
     <pre>
-      &lt;x-image-text @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" /&gt;
+      &lt;image-text @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" /&gt;
 
       Props:
         image: String(url) 不传或为空则不显示图片
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-import { XImageText } from '../../index'
+import { ImageText } from '../../index'
 
 export default {
   components: {
-    XImageText
+    ImageText
   },
   data () {
     return {

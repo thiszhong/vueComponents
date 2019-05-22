@@ -1,37 +1,37 @@
-import ProductItemV from './components/ProductItem'
-import Search from './components/Search'
-import SortBar from './components/SortBar'
-import CouponFilter from './components/CouponFilter'
-import Slider from './components/Slider'
-import ImageText from './components/ImageText'
-import Entry from './components/Entry'
-import Channel from './components/Channel'
-import ScrollableBar from './components/ScrollableBar'
-import Coupon from './components/Coupon'
-import SectionTitle from './components/SectionTitle'
+import ZProductItemV from './components/product-item'
+import ZSearch from './components/search'
+import ZSortBar from './components/sort-bar'
+import ZCouponFilter from './components/coupon-filter'
+import ZSlider from './components/slider'
+import ZImageText from './components/image-text'
+import ZEntry from './components/entry'
+import ZChannel from './components/channel'
+import ZScrollableBar from './components/scrollable-bar'
+import ZCoupon from './components/coupon'
+import ZSectionTitle from './components/section-title'
 
-export const XProductV = ProductItemV
-export const XSearch = Search
-export const XSortBar = SortBar
-export const XCouponFilter = CouponFilter
-export const XSlider = Slider
-export const XImageText = ImageText
-export const XEntry = Entry
-export const XChannel = Channel
-export const XScrollableBar = ScrollableBar
-export const XCoupon = Coupon
-export const XSectionTitle = SectionTitle
+export const ProductV = ZProductItemV
+export const Search = ZSearch
+export const SortBar = ZSortBar
+export const CouponFilter = ZCouponFilter
+export const Slider = ZSlider
+export const ImageText = ZImageText
+export const Entry = ZEntry
+export const Channel = ZChannel
+export const ScrollableBar = ZScrollableBar
+export const Coupon = ZCoupon
+export const SectionTitle = ZSectionTitle
 
 export default {
-  XProductV,
-  XSearch,
-  XSortBar,
-  XCouponFilter,
-  XSlider,
-  XImageText,
-  XEntry,
-  XChannel,
-  XScrollableBar,
-  XCoupon,
-  XSectionTitle,
+  ProductV,
+  Search,
+  SortBar,
+  CouponFilter,
+  Slider,
+  ImageText,
+  Entry,
+  Channel,
+  ScrollableBar,
+  Coupon,
+  SectionTitle,
 }

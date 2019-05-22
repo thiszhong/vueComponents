@@ -1,9 +1,9 @@
 <template>
   <div>
-    <x-entry :list="list" :column="4" borderRadius="50%" @click="entryClick" />
+    <entry :list="list" :column="4" borderRadius="50%" @click="entryClick" />
 
     <pre>
-      &lt;x-entry :list="list" :column="4" borderRadius="50%" @click="entryClick" /&gt;
+      &lt;entry :list="list" :column="4" borderRadius="50%" @click="entryClick" /&gt;
 
       Props:
         list: Array required
@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import { XEntry } from '../../index'
+import { Entry } from '../../index'
 
 export default {
   components: {
-    XEntry
+    Entry
   },
   data () {
     return {
