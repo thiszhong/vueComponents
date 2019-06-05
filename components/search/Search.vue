@@ -1,10 +1,10 @@
 <template>
-  <div class="search-box">
+  <div @click="onClick" class="search-box">
     <div class="search-area" :class="{'search-area-focus': isFocus}">
       <div class="search-icon"><img :src="icon" alt=""></div>
       <div class="search-input">
         <span v-if="isPlaceholder">{{placeholder}}</span>
-        <input v-else type="text" id="xSearchInput" ref="search"
+        <input v-else type="search" id="xSearchInput" ref="search"
           v-model="innerValue"
           :placeholder="placeholder"
           :autofocus="focus"
@@ -15,7 +15,7 @@
       </div>
       <div v-show="hasInput" @click="onClear" class="search-clear"></div>
     </div>
-    <button v-show="hasInput" @click="onSearch" class="search-btn">搜索</button>
+    <button v-if="!isPlaceholder" @click="onSearch" class="search-btn">搜索</button>
   </div>
 </template>
 
@@ -81,14 +81,16 @@ export default {
     },
     onSearch () {
       this.$emit('search', this.innerValue)
-      console.log(this.innerValue)
     },
-    onClear () {
+    onClear (focus = true) {
       this.innerValue = ''
-      this.setFocus()
+      if (focus) this.setFocus()
     },
     setFocus () {
       if (this.$refs.search) this.$refs.search.focus()
+    },
+    onClick () {
+      if (this._events.click) this.$emit('click')
     }
   }
 }
@@ -154,6 +156,9 @@ export default {
   font-size: 15px;
   border: 0;
   outline: none;
+}
+.search-input input::-webkit-search-cancel-button{
+  -webkit-appearance: none;
 }
 .search-clear {
   width: 30px;

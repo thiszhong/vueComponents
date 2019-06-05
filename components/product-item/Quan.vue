@@ -1,6 +1,6 @@
 <template>
   <div v-if="value" class="quan">
-    <span>{{value}}元券</span>
+    <span>{{value}}</span>
   </div>
 </template>
 
@@ -9,8 +9,7 @@ export default {
   name: 'Quan',
   props: {
     value: {
-      type: Number,
-      default: () => 0
+      type: String
     }
   }
 }

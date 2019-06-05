@@ -2,7 +2,7 @@
   <div class="sort-bar">
     <div v-for="(item, index) in innerSorts" :key="item.name" 
       class="sort-item"
-      :class="{'gtcolor': activeIndex === index}"
+      :style="{color: activeIndex === index ? color : ''}"
       @click="sortClick(index)"
     >
       <span>{{item.name}}</span>
@@ -12,8 +12,8 @@
           <div class="sort-down"></div>
         </template>
         <template v-else>
-          <div class="sort-up" :class="{'sort-up-active': item.value.active === 'up'}"></div>
-          <div class="sort-down" :class="{'sort-down-active': item.value.active === 'down'}"></div>
+          <div class="sort-up" :style="{'borderBottomColor': item.value.active === 'up' ? color : ''}"></div>
+          <div class="sort-down" :style="{'borderTopColor': item.value.active === 'down' ? color : ''}"></div>
         </template>
       </div>
     </div>
@@ -22,9 +22,9 @@
 
 <script>
 const defaultSorts = [
-  {name: '推荐', value: 1},
-  {name: '销量', value: {up: 2, down: 3, active: 'down'}},
-  {name: '价格', value: {up: 4, down: 5, active: 'up'}},
+  {name: '推荐', value: ''},
+  {name: '销量', value: {up: 'month_sales_asc', down: 'month_sales_des', active: 'down'}},
+  {name: '价格', value: {up: 'discount_price_asc', down: 'discount_price_des', active: 'up'}},
 ]
 export default {
   name: 'SortBar',
@@ -32,6 +32,10 @@ export default {
     sorts: {
       type: Array,
       default: null
+    },
+    color: {
+      type: String,
+      default: '#F72353'
     }
   },
   data () {
@@ -44,6 +48,9 @@ export default {
     sorts (val) {
       this.setSorts(val)
     }
+  },
+  created () {
+    if (this.sorts) this.setSorts(this.sorts)
   },
   methods: {
     setSorts (d) {
@@ -90,9 +97,6 @@ export default {
   align-items: center;
   cursor: pointer;
 }
-.gtcolor {
-  color: #F72353;
-}
 .sort-roll {
   height: 23px;
   width: 10px;
@@ -111,12 +115,6 @@ export default {
 }
 .sort-down {
   border-top-color: #c6c6c6;
-}
-.sort-up-active {
-  border-bottom-color: #F72353;
-}
-.sort-down-active {
-  border-top-color: #F72353;
 }
 </style>
 

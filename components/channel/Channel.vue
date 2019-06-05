@@ -2,28 +2,28 @@
   <!-- 频道/豆腐块 支持item个数1-4。其中3有两种样式，默认左1右2 和 带horzontal属性后的一行3个 -->
   <div class="channel-wrap" :style="boxStyle">
     <div :class="{'channel1': listLen > 1, 'channel1__h': listLen === 2 || len3H}">
-      <div class="channel-box channel1-box">
-        <img :src="list[0].image" alt="">
+      <div @click="itemClick(list[0])" class="channel-box channel1-box">
+        <img :src="list[0].cover" alt="">
       </div>
     </div>
     <div v-if="listLen > 1" class="channel-r">
       <div class="channel2" :class="{'channel2__3h': len3H}">
-        <div class="channel-box channel2-box">
-          <img :src="list[1].image" alt="">
+        <div @click="itemClick(list[1])" class="channel-box channel2-box">
+          <img :src="list[1].cover" alt="">
         </div>
       </div>
       <div v-if="listLen > 2" :class="{'channel__b': listLen === 4 || !horzontal, 'channel3__3h': len3H}">
         <template v-if="list[2]">
           <div class="channel3" :class="{'channel3__len3': listLen === 3 && !horzontal}">
-            <div class="channel-box channel3-box">
-              <img :src="list[2].image" alt="">
+            <div @click="itemClick(list[2])" class="channel-box channel3-box">
+              <img :src="list[2].cover" alt="">
             </div>
           </div>
         </template>
         <template v-if="list[3]">
           <div class="channel4">
-            <div class="channel-box channel4-box">
-              <img :src="list[3].image" alt="">
+            <div @click="itemClick(list[3])" class="channel-box channel4-box">
+              <img :src="list[3].cover" alt="">
             </div>
           </div>
         </template>
@@ -55,6 +55,11 @@ export default {
     },
     len3H () {
       return this.listLen === 3 && this.horzontal
+    }
+  },
+  methods: {
+    itemClick (item) {
+      if (this._events.click) this.$emit('click', item)
     }
   }
 }

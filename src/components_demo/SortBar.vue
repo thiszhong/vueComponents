@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sort-bar @change="onChange" />
+    <sort-bar :sorts="sorts" @change="onChange" />
 
     <pre>
       &lt;sort-bar ref="mySort" :sorts="arr(option)" @change="onChange" /&gt;
@@ -24,6 +24,14 @@ import { SortBar } from '../../index'
 export default {
   components: {
     SortBar
+  },
+  data () {
+    return {
+      sorts: [
+        {name: '加入时间', value: {up: 'id_asc ', down: 'id_des', active: 'down'}},
+        {name: '订单数', value: {up: 'order_count_asc', down: 'order_count_des ', active: 'down'}}
+      ]
+    }
   },
   methods: {
     onChange (d) {

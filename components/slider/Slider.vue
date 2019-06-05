@@ -7,7 +7,7 @@
     >
       <swipe-item v-for="(item, index) in list" :key="index" @click="itemClick(item, index)">
         <div class="slider-item" :style="{'padding-bottom': hPadding}">
-          <img :src="item.image" />
+          <img :src="item.cover" />
         </div>
       </swipe-item>
     </swipe>

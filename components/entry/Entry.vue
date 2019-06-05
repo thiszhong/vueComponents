@@ -6,9 +6,9 @@
       @click="itemClick(item, index)"
     >
       <div class="entry-icon" :style="{borderRadius: borderRadius}">
-        <img :src="item.image" alt="">
+        <img :src="item.cover || item.icon" alt="">
       </div>
-      <span>{{item.name}}</span>
+      <span>{{item.title || item.name}}</span>
     </div>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     itemClick (item, index) {
-      this.$emit('click', item, index)
+      if (this._events.click) this.$emit('click', item, index)
     }
   }
 }

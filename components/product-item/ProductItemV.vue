@@ -1,7 +1,7 @@
 <template>
   <div @click="onClick" class="pitem">
     <div class="pi-left">
-      <img :src="item.image" alt="">
+      <img v-lazy="item.cover_image" alt="">
     </div>
     <div class="pi-right">
       <div class="flex-r pi-title-line">
@@ -13,7 +13,7 @@
       </div>
       <div class="flex-r pi-line">
         <div v-if="item.fl_commission" class="gborder gtcolor pi-box"><span>{{item.fl_commission}}</span></div>
-        <span class="pil-txt">销量：{{item.sales}}</span>
+        <span class="pil-txt">销量：{{item.month_sales}}</span>
       </div>
       <div class="flex-r pi-price-line">
         <div class="pi-price">
@@ -21,7 +21,7 @@
           <big class="gtcolor">{{item.discount_price}} </big>
           <span>&yen;{{item.price}}</span>
         </div>
-        <Quan :value="item.amount" />
+        <Quan :value="item.coupon_money_text" />
       </div>
     </div>
   </div>
@@ -83,6 +83,7 @@ export default {
   width: 2.4em;
   height: 2.4em;
   margin-right: 7px;
+  background: #f6f6f6;
 }
 .pi-left img {
   display: block;
