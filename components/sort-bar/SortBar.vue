@@ -36,6 +36,9 @@ export default {
     color: {
       type: String,
       default: '#F72353'
+    },
+    index: {
+      type: Number
     }
   },
   data () {
@@ -51,6 +54,7 @@ export default {
   },
   created () {
     if (this.sorts) this.setSorts(this.sorts)
+    if (this.index) this.activeIndex = this.index
   },
   methods: {
     setSorts (d) {
