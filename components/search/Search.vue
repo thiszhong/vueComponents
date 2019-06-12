@@ -42,7 +42,8 @@ export default {
     focus: {
       type: Boolean,
       default: false
-    }
+    },
+    url: String
   },
   data () {
     return {
@@ -83,6 +84,7 @@ export default {
     },
     onSearch () {
       this.$emit('search', this.innerValue)
+      if (this.$refs.search) this.$refs.search.blur()
     },
     onClear (focus = true) {
       this.innerValue = ''
@@ -92,7 +94,7 @@ export default {
       if (this.$refs.search) this.$refs.search.focus()
     },
     onClick () {
-      if (this._events.click) this.$emit('click', {url: '/search'})
+      if (this._events.click) this.$emit('click', {url: this.url || '/search'})
     }
   }
 }

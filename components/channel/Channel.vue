@@ -68,6 +68,7 @@ export default {
   background: white;
   box-sizing: border-box;
   overflow: hidden;
+  padding: .1em .4em;
 }
 .channel-r {
   width: 48%;
