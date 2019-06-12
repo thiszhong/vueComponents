@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'Coupon',
+  name: 'ZCoupon',
   props: {
     amount: {
       type: Number,
@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .x-coupon {
   position: relative;
   color: #FE5E7A;

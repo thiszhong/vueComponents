@@ -12,7 +12,7 @@
       Props:
         list: Array 数据
         index: Number 选中项索引
-        boxStyle: Object(style) 根节点样式
+        style: Object(style) 根节点样式
       Event:
         click: params(item, index)
     </pre>

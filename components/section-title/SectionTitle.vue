@@ -1,5 +1,5 @@
 <template>
-  <div class="x-section-title" :style="boxStyle">
+  <div class="x-section-title">
     <h3 :class="{'xst-lump': type === 'lump', 'xst-circle': type === 'circle'}">
       <span style="vertical-align: middle;">{{title}}</span>
     </h3>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'SectionTitle',
+  name: 'ZSectionTitle',
   props: {
     title: {
       type: String
@@ -16,9 +16,6 @@ export default {
     type: {
       type: String,
       default: 'lump'
-    },
-    boxStyle: {
-      type: Object
     }
   }
 }

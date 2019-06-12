@@ -1,5 +1,5 @@
 <template>
-  <div class="entry-wrap" :style="boxStyle">
+  <div class="entry-wrap">
     <div v-for="(item, index) in list" :key="`${item.name || ''}${index}`" 
       class="entry-item"
       :style="{width: itemWidth}"
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'Entry',
+  name: 'ZEntry',
   props: {
     list: {
       type: Array,
@@ -28,9 +28,6 @@ export default {
     borderRadius: {
       type: String,
       default: '0px'
-    },
-    boxStyle: {
-      type: Object,
     }
   },
   computed: {
@@ -48,12 +45,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .entry-wrap {
   font-size: 12px;
   color: #444;
   text-align: center;
   overflow: hidden;
+  margin: 5px 0;
 }
 .entry-item {
   float: left;

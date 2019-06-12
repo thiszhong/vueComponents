@@ -1,7 +1,8 @@
 <template>
   <div @click="onClick" class="pitem">
     <div class="pi-left">
-      <img v-lazy="item.cover_image" alt="">
+      <img v-if="lazy" v-lazy="item.cover_image" alt="">
+      <img v-else :src="item.cover_image" alt="">
     </div>
     <div class="pi-right">
       <div class="flex-r pi-title-line">
@@ -31,11 +32,15 @@
 import Quan from './Quan';
 
 export default {
-  name: 'ProductItemV',
+  name: 'ZProductItemV',
   props: {
     item: {
       type: Object,
       default: () => ({})
+    },
+    lazy: {
+      type: Boolean,
+      default: false
     }
   },
   components: {

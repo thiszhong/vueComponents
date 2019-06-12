@@ -7,9 +7,9 @@
 
       Props:
         list: Array required
-        boxStyle: Object(style) 
         column: Number: 每行显示几个 default: 4
         borderRadius: String(px或%) icon圆角 default: 0px
+        style: Object(style) 
       Event:
         click: params(item, index)
     </pre>

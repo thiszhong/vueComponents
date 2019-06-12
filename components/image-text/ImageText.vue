@@ -1,5 +1,5 @@
 <template>
-  <div @click="onClick" class="imgage-text" :style="boxStyle">
+  <div @click="onClick" class="imgage-text">
     <div v-if="image" class="it-image" :style="imgStyle">
       <img :src="image" alt="">
     </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'ImageText',
+  name: 'ZImageText',
   props: {
     image: {
       type: String,
@@ -21,19 +21,17 @@ export default {
       type: String,
       default: null
     },
-    boxStyle: {
-      type: Object,
-    },
     imgStyle: {
       type: Object,
     },
     textStyle: {
       type: Object,
-    }
+    },
+    url: String
   },
   methods: {
     onClick () {
-      this.$emit('click')
+      this.$emit('click', {url: this.url})
     }
   }
 }

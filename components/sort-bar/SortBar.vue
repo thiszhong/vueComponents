@@ -1,19 +1,19 @@
 <template>
-  <div class="sort-bar">
+  <div class="z-sort-bar">
     <div v-for="(item, index) in innerSorts" :key="item.name" 
-      class="sort-item"
+      class="z-sort-item"
       :style="{color: activeIndex === index ? color : ''}"
       @click="sortClick(index)"
     >
       <span>{{item.name}}</span>
-      <div v-if="item.value.up" class="sort-roll">
+      <div v-if="item.value.up" class="z-sort-roll">
         <template v-if="activeIndex !== index">
-          <div class="sort-up"></div>
-          <div class="sort-down"></div>
+          <div class="z-sort-up"></div>
+          <div class="z-sort-down"></div>
         </template>
         <template v-else>
-          <div class="sort-up" :style="{'borderBottomColor': item.value.active === 'up' ? color : ''}"></div>
-          <div class="sort-down" :style="{'borderTopColor': item.value.active === 'down' ? color : ''}"></div>
+          <div class="z-sort-up" :style="{'borderBottomColor': item.value.active === 'up' ? color : ''}"></div>
+          <div class="z-sort-down" :style="{'borderTopColor': item.value.active === 'down' ? color : ''}"></div>
         </template>
       </div>
     </div>
@@ -27,7 +27,7 @@ const defaultSorts = [
   {name: '价格', value: {up: 'discount_price_asc', down: 'discount_price_des', active: 'up'}},
 ]
 export default {
-  name: 'SortBar',
+  name: 'ZSortBar',
   props: {
     sorts: {
       type: Array,
@@ -83,8 +83,8 @@ export default {
 }
 </script>
 
-<style scoped>
-.sort-bar {
+<style>
+.z-sort-bar {
   font-size: 14px;
   color: #444;
   display: flex;
@@ -93,7 +93,7 @@ export default {
   height: 36px;
   background: white;
 }
-.sort-item {
+.z-sort-item {
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -101,23 +101,23 @@ export default {
   align-items: center;
   cursor: pointer;
 }
-.sort-roll {
+.z-sort-roll {
   height: 23px;
   width: 10px;
   padding-left: 4px;
 }
-.sort-up, .sort-down {
+.z-sort-up, .z-sort-down {
   width: 0;
   height: 0;
   border-color: transparent;
   border-width: 5px;
   border-style: solid;
 }
-.sort-up {
+.z-sort-up {
   margin-bottom: 2px;
   border-bottom-color: #c6c6c6;
 }
-.sort-down {
+.z-sort-down {
   border-top-color: #c6c6c6;
 }
 </style>

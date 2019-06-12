@@ -15,7 +15,6 @@
         autoplay: Number: 自动轮播间隔（ms）,不设或设为0则不自动轮播
         aspect-ratio: Number: 宽高比 default: 2.89
         indicator-color: String(color): 指示焦点颜色 default: #F72353
-        border-radius: String(*px): 圆角 default: 10px
       Event:
         click: params(item, index)
         this.$refs.mySlider.swipeTo(index)

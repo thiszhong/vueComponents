@@ -1,8 +1,8 @@
 <template>
-  <div @click="onClick" class="search-box">
-    <div class="search-area" :class="{'search-area-focus': isFocus}">
-      <div class="search-icon"><img :src="icon" alt=""></div>
-      <div class="search-input">
+  <div @click="onClick" class="z-search-box">
+    <div class="z-search-area" :class="{'z-search-area-focus': isFocus}">
+      <div class="z-search-icon"><img :src="icon" alt=""></div>
+      <div class="z-search-input">
         <span v-if="isPlaceholder">{{placeholder}}</span>
         <input v-else type="search" id="xSearchInput" ref="search"
           v-model="innerValue"
@@ -13,15 +13,15 @@
           @keyup.enter="onSearch"
         />
       </div>
-      <div v-show="hasInput" @click="onClear" class="search-clear"></div>
+      <div v-show="hasInput" @click="onClear" class="z-search-clear"></div>
     </div>
-    <button v-if="!isPlaceholder" @click="onSearch" class="search-btn">搜索</button>
+    <button v-if="!isPlaceholder" @click="onSearch" class="z-search-btn">搜索</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Search',
+  name: 'ZSearch',
   model: {
     prop: 'value',
     event: 'input'
@@ -75,9 +75,11 @@ export default {
   methods: {
     onFocus () {
       this.isFocus = true
+      if (this._events.focus) this.$emit('focus')
     },
     onBlur () {
       this.isFocus = false
+      if (this._events.blur) this.$emit('blur')
     },
     onSearch () {
       this.$emit('search', this.innerValue)
@@ -90,22 +92,23 @@ export default {
       if (this.$refs.search) this.$refs.search.focus()
     },
     onClick () {
-      if (this._events.click) this.$emit('click')
+      if (this._events.click) this.$emit('click', {url: '/search'})
     }
   }
 }
 </script>
 
 <style>
-.search-box {
+.z-search-box {
   position: relative;
-  font-size: 15px;
   height: 33px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: .2em .4em;
 }
-.search-area {
+.z-search-area {
+  font-size: 15px;
   position: relative;
   height: 100%;
   flex: 1;
@@ -119,28 +122,28 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
 }
-/* .search-area-focus, .search-area:hover {
+/* .z-search-area-focus, .z-search-area:hover {
   border-color: white;
   box-shadow: 0 0 7px #ddd;
 } */
-.search-icon {
+.z-search-icon {
   width: 60px;
   height: 20px;
   text-align: right;
   overflow: hidden;
   transition: all .3s;
 }
-.search-area-focus .search-icon {
+.z-search-area-focus .z-search-icon {
   width: 0;
   opacity: 0;
 }
-.search-icon img {
+.z-search-icon img {
   width: 20px;
   height: 20px;
   display: inline-block;
   vertical-align: middle;
 }
-.search-input {
+.z-search-input {
   position: relative;
   flex: 1;
   white-space: nowrap;
@@ -150,17 +153,17 @@ export default {
   padding-right: 35px;
   box-sizing: border-box;
 }
-.search-input input {
+.z-search-input input {
   width: 100%;
   height: 100%;
   font-size: 15px;
   border: 0;
   outline: none;
 }
-.search-input input::-webkit-search-cancel-button{
+.z-search-input input::-webkit-search-cancel-button{
   -webkit-appearance: none;
 }
-.search-clear {
+.z-search-clear {
   width: 30px;
   height: 100%;
   background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAIVBMVEVHcEza2trb29vb29vb29va2trb29vf39/c3Nzb29vb29shSHhRAAAACnRSTlMAoYDP7J9mGlBAGFod+gAAAQ9JREFUSMetltsSwyAIRKOCF/7/g9tc2kFZY+iUt8zsUVgVsm1/iNLiEa08UVcm+QZxXawdlfpi4s0+2cgPJM+WTzKJBDepJNMgUEqW28hOvSGqLKPLqtAaIF15kgeRHAUMZaiEQjDrJptU1LsOBOt84wVQl2YY9Aoga2nuifD+ZGNtkBkx6o8NdUYDYfSnswWYF7BeZPepCSaQXlpnakdA/WFsnB6p1c+AkwD6KcDG7nvgtBsRGNj1zJCIyFY+84dEAwfHn3oRUezVUP5bgqzd3Xkxuu399R7OdyQqekC8fED9E+UHT1Q1gZSeNAF3m/E3Mn+rdDdjf7v3DxT/yPIPRf/Y/WGw+38dfvk5WcULbnk4DDaH0NAAAAAASUVORK5CYII=') center no-repeat;
@@ -169,7 +172,7 @@ export default {
   right: 0;
   top: 0;
 }
-.search-btn {
+.z-search-btn {
   font-size: 16px;
   color: white;
   width: 54px;
@@ -180,7 +183,7 @@ export default {
   border-radius: 5px;
   outline: none;
 }
-.search-btn:active {
+.z-search-btn:active {
   transform: scale(1.1)
 }
 </style>

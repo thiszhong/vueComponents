@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'Quan',
+  name: 'ZQuan',
   props: {
     value: {
       type: String

@@ -8,9 +8,9 @@
       Props:
         image: String(url) 不传或为空则不显示图片
         text: String 
-        boxStyle: Object 其中css名 多段的可以使用驼峰式或加引号
         imgStyle: Object
         textStyle: Object
+        style: Object 其中css名 多段的可以使用驼峰式或加引号
       Event:
         click
     </pre>

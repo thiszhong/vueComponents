@@ -17,7 +17,7 @@
 import { Swipe, SwipeItem } from 'vant'
 
 export default {
-  name: 'Slider',
+  name: 'ZSlider',
   components: {
     Swipe,
     SwipeItem
@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .slider-item {
   width: 100%;
   height: 0;

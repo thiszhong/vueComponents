@@ -9,7 +9,7 @@
 import { Switch } from 'vant';
 
 export default {
-  name: 'CouponFilter',
+  name: 'ZCouponFilter',
   components: {
     VanSwitch: Switch
   },
@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .coupon-filter {
   font-size: 14px;
   height: 34px;

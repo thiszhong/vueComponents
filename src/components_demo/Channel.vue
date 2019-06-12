@@ -29,15 +29,15 @@
       </div>
     </div>
 
-    <channel @click="itemClick" :list="injectList" :horzontal="horzontal" :boxStyle="{padding: '20px'}" />
+    <channel @click="itemClick" :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" />
 
     <pre>
-      &lt;channel :list="injectList" :horzontal="horzontal" :boxStyle="{padding: '20px'}" /&gt;
+      &lt;channel :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" /&gt;
 
       Props:
         list: Array 数据
         horzontal: Boolean 仅list.length === 3时有效，此个数下有两种排版样式
-        boxStyle: Object(style) 根节点样式
+        style: Object(style) 根节点样式
       Event:
         click: params(item, index)
     </pre>

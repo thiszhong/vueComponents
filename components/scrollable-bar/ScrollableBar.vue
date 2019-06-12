@@ -1,5 +1,5 @@
 <template>
-  <div class="x-scroll-bar" :class="{'xs_pc_env': isPc}" :style="boxStyle">
+  <div class="x-scroll-bar" :class="{'xs_pc_env': isPc}">
     <div class="x-scroll" ref="xScroll">
       <template v-for="(item, index) in list">
         <div 
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'ScrollableBar',
+  name: 'ZScrollableBar',
   props: {
     list: {
       type: Array,
@@ -24,9 +24,6 @@ export default {
     },
     index: {
       type: Number
-    },
-    boxStyle: {
-      type: Object
     }
   },
   data () {

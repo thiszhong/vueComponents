@@ -13,8 +13,8 @@ import ZSectionTitle from './components/section-title'
 export const ProductV = ZProductItemV
 export const Search = ZSearch
 export const SortBar = ZSortBar
-// export const CouponFilter = ZCouponFilter
-// export const Slider = ZSlider
+export const CouponFilter = null
+export const Slider = null
 export const ImageText = ZImageText
 export const Entry = ZEntry
 export const Channel = ZChannel
