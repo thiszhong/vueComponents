@@ -67,7 +67,7 @@ export default {
         this.scrollTo(toX)
         this.activeIndex = index
       }
-      this.$emit('click', item, index)
+      this.$emit('change', item, index)
     },
     scrollTo(x) {
       let left = this.scrollElem.scrollLeft
@@ -95,6 +95,7 @@ export default {
   color: black;
   white-space: nowrap;
   overflow: hidden;
+  background: white;
 }
 .xs_pc_env {
   /* 默认滚动条宽度为17px */
