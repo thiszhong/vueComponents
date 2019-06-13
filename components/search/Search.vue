@@ -175,9 +175,9 @@ export default {
   top: 0;
 }
 .z-search-btn {
-  font-size: 16px;
+  font-size: 15px;
   color: white;
-  width: 54px;
+  width: 56px;
   margin-left: 10px;
   height: 32px;
   background-image: linear-gradient(to right, #F72353, #FD935F);
