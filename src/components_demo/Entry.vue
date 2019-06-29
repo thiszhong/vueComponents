@@ -1,9 +1,9 @@
 <template>
   <div>
-    <entry :list="list" :column="4" borderRadius="50%" @click="entryClick" />
+    <Entry :list="list" :column="4" borderRadius="50%" @click="entryClick" />
 
     <pre>
-      &lt;entry :list="list" :column="4" borderRadius="50%" @click="entryClick" /&gt;
+      &lt;Entry :list="list" :column="4" borderRadius="50%" @click="entryClick" /&gt;
 
       Props:
         list: Array required

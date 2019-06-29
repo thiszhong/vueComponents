@@ -1,9 +1,9 @@
 <template>
   <div>
-    <sort-bar :sorts="sorts" @change="onChange" />
+    <SortBar :sorts="sorts" @change="onChange" />
 
     <pre>
-      &lt;sort-bar ref="mySort" :sorts="arr(option)" @change="onChange" /&gt;
+      &lt;SortBar ref="mySort" :sorts="arr(option)" @change="onChange" /&gt;
 
       Props:
         sorts: default: [

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <product-v :item="resource" @click="itemClick" />
-    <product-v :item="resource" @click="itemClick" />
+    <ProductV :item="resource" @click="itemClick" />
+    <ProductV :item="resource" @click="itemClick" />
 
     <pre>
-      &lt;product-v :item="resource" @click="itemClick" /&gt;
+      &lt;ProductV :item="resource" @click="itemClick" /&gt;
     </pre>
   </div>
 </template>
@@ -27,8 +27,9 @@ export default {
         price: '339.9',
         discount_price: '39.9',
         amount: 300,
+        coupon_money_text: '10元优惠券',
         fl_commission: '赚9元',
-        sales: 123456
+        month_sales: 123456
       }
     }
   },

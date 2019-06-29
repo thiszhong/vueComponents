@@ -1,9 +1,9 @@
 <template>
   <div>
-    <scrollable-bar @click="itemClick" :list="list" :index="3" />
+    <ScrollableBar @click="itemClick" :list="list" :index="3" />
 
     <pre>
-      &lt;scrollable-bar 
+      &lt;ScrollableBar 
         @click="itemClick" 
         :list="list" 
         :index="3" 

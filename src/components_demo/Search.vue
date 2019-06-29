@@ -1,9 +1,9 @@
 <template>
   <div>
-    <search v-model="searchValue" :focus="focus" @search="onSearch" />
+    <Search v-model="searchValue" :focus="focus" @search="onSearch" />
 
     <pre>
-      &lt;search 
+      &lt;Search 
         v-model="searchValue(option)" 
         :focus="false(default)" 
         :isPlaceholder="false(default)"

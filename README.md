@@ -35,8 +35,5 @@ npm run serve
     }
   ```
 
-### 关于引用
-有使用到有赞[Vant](https://github.com/youzan/vant)的`Switch`、`Swipe`组件
-
 ### LICENSE
 [MIT](https://en.wikipedia.org/wiki/MIT_License)

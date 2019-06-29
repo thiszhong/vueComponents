@@ -1,6 +1,6 @@
 <template>
   <div>
-    <coupon 
+    <Coupon 
       @click="click"
       :amount="5" 
       start_time="2019-06-01" end_time="2019-06-02"
@@ -8,7 +8,7 @@
     />
 
     <pre>
-      &lt;coupon 
+      &lt;Coupon 
         @click="click"
         :amount="5" 
         start_time="2019-06-01" end_time="2019-06-02"

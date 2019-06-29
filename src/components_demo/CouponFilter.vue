@@ -1,10 +1,10 @@
 <template>
   <div>
-    <coupon-filter :checked="true" @change="onChange" />
+    <CouponFilter :checked="true" @change="onChange" />
     <p style="text-align: right;font-size: 14px;" :style="{color: status ? 'green': '#666'}">isChecked: {{status}}</p>
 
     <pre>
-      &lt;coupon-filter :checked="true" @change="onChange" /&gt;
+      &lt;CouponFilter :checked="true" @change="onChange" /&gt;
 
       Props:
         checked: Boolean

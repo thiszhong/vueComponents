@@ -33,16 +33,16 @@ export default [
     name: 'CouponFilter',
     meta: {
       title: '筛选有券'
-    }
-    // component: () => import(/* webpackChunkName: "coupon_filter" */ '../components_demo/CouponFilter')
+    },
+    component: () => import(/* webpackChunkName: "coupon_filter" */ '../components_demo/CouponFilter')
   },
   {
     path: '/Slider',
     name: 'Slider',
     meta: {
       title: '轮播'
-    }
-    // component: () => import(/* webpackChunkName: "slider" */ '../components_demo/Slider')
+    },
+    component: () => import(/* webpackChunkName: "slider" */ '../components_demo/Slider')
   },
   {
     path: '/ImageText',

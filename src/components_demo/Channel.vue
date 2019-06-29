@@ -29,10 +29,10 @@
       </div>
     </div>
 
-    <channel @click="itemClick" :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" />
+    <Channel @click="itemClick" :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" />
 
     <pre>
-      &lt;channel :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" /&gt;
+      &lt;Channel :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" /&gt;
 
       Props:
         list: Array 数据

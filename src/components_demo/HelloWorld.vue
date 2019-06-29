@@ -17,6 +17,7 @@
                 {
                   "libraryName": "vue-components",
                   "libraryDirectory": 'components',
+                  "camel2DashComponentName": false,
                   "style": false
                 },
                 "vue-components"

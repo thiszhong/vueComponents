@@ -1,37 +1,38 @@
-import ZProductItemV from './components/product-item'
-import ZSearch from './components/search'
-import ZSortBar from './components/sort-bar'
-// import ZCouponFilter from './components/coupon-filter'
-// import ZSlider from './components/slider'
-import ZImageText from './components/image-text'
-import ZEntry from './components/entry'
-import ZChannel from './components/channel'
-import ZScrollableBar from './components/scrollable-bar'
-import ZCoupon from './components/coupon'
-import ZSectionTitle from './components/section-title'
+import ProductV from './components/ProductV'
+import Search from './components/Search'
+import SortBar from './components/SortBar'
+import CouponFilter from './components/CouponFilter'
+import ImageText from './components/ImageText'
+import Entry from './components/Entry'
+import Channel from './components/Channel'
+import ScrollableBar from './components/ScrollableBar'
+import Coupon from './components/Coupon'
+import SectionTitle from './components/SectionTitle'
 
-export const ProductV = ZProductItemV
-export const Search = ZSearch
-export const SortBar = ZSortBar
-export const CouponFilter = null
-export const Slider = null
-export const ImageText = ZImageText
-export const Entry = ZEntry
-export const Channel = ZChannel
-export const ScrollableBar = ZScrollableBar
-export const Coupon = ZCoupon
-export const SectionTitle = ZSectionTitle
-
-export default {
+const components = {
   ProductV,
   Search,
   SortBar,
-  // CouponFilter,
-  // Slider,
+  CouponFilter,
   ImageText,
   Entry,
   Channel,
   ScrollableBar,
   Coupon,
-  SectionTitle,
+  SectionTitle
 }
+
+export {
+  ProductV,
+  Search,
+  SortBar,
+  CouponFilter,
+  ImageText,
+  Entry,
+  Channel,
+  ScrollableBar,
+  Coupon,
+  SectionTitle
+}
+
+export default components

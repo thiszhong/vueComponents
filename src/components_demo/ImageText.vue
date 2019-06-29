@@ -1,9 +1,9 @@
 <template>
   <div>
-    <image-text @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" />
+    <ImageText @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" />
 
     <pre>
-      &lt;image-text @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" /&gt;
+      &lt;ImageText @click="onClick" :image="image" :text="text" :imgStyle="imgStyle" /&gt;
 
       Props:
         image: String(url) 不传或为空则不显示图片

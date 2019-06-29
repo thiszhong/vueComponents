@@ -1,9 +1,9 @@
 <template>
   <div>
-    <section-title title="标题" type="circle" :style="{background: 'white'}" />
+    <SectionTitle title="标题" type="circle" :style="{background: 'white'}" />
 
     <pre>
-      &lt;section-title title="标题" type="circle" :style="{background: 'white'}" /&gt;
+      &lt;SectionTitle title="标题" type="circle" :style="{background: 'white'}" /&gt;
 
       Props:
         title: String

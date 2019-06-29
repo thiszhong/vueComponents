@@ -1,14 +1,7 @@
 <template>
   <div>
-    <slider ref="mySlider" 
-      @click="itemClick"
-      :list="list" 
-      :autoplay="3000" 
-      :aspect-ratio="2.89"
-    />
-
     <pre>
-      &lt;slider ref="mySlider" :list="list" :autoplay="3000" /&gt;
+      &lt;Slider ref="mySlider" :list="list" :autoplay="3000" /&gt;
 
       Props:
         list: Array: 轮播数据
@@ -21,25 +14,8 @@
     </pre>
   </div>
 </template>
-<script>
-import { Slider } from '../../index'
 
+<script>
 export default {
-  components: {
-    Slider
-  },
-  data () {
-    return {
-      list: [
-        {image: 'https://img.alicdn.com/imgextra/i4/1771518377/O1CN01yLngD82BkiLHgwkTP_!!1771518377.jpg_200x200.jpg'},
-        {image: 'https://img.alicdn.com/imgextra/i3/1082189052/O1CN01C5pRIC2GjrhQzezEB_!!1082189052.jpg_200x200.jpg'},
-      ]
-    }
-  },
-  methods: {
-    itemClick (item, index) {
-      alert(`第${index}张，itemData: ${JSON.stringify(item)}`)
-    }
-  }
 }
 </script>

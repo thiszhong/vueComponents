@@ -32,7 +32,7 @@
 import Quan from './Quan';
 
 export default {
-  name: 'ZProductItemV',
+  name: 'ZProductV',
   props: {
     item: {
       type: Object,
