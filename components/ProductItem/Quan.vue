@@ -1,12 +1,12 @@
 <template>
-  <div v-if="value" class="quan">
+  <div v-if="value" class="x-quan">
     <span>{{value}}</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ZQuan',
+  name: 'XQuan',
   props: {
     value: {
       type: String
@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-.quan {
+.x-quan {
   position: relative;
   color: white;
   height: .4em;
@@ -27,10 +27,10 @@ export default {
   background-image: linear-gradient(to right, #F72353, #FD935F);
   border-radius: .08em;
 }
-.quan span {
+.x-quan span {
   font-size: .28em;
 }
-.quan::before, .quan::after {
+.x-quan::before, .x-quan::after {
   content: '';
   width: .16em;
   height: .16em;
@@ -40,7 +40,7 @@ export default {
   background: white;
   border-radius: 50%;
 }
-.quan::before {
+.x-quan::before {
   left: -.08em;
 }
 </style>

@@ -1,23 +1,23 @@
 <template>
-  <div @click="onClick" class="pitem">
-    <div class="pi-left">
+  <div @click="onClick" class="x-pitem">
+    <div class="x-pi-left">
       <img v-if="lazy" v-lazy="item.cover_image" alt="">
       <img v-else :src="item.cover_image" alt="">
     </div>
-    <div class="pi-right">
-      <div class="flex-r pi-title-line">
+    <div class="x-pi-right">
+      <div class="flex-r x-pi-title-line">
         <img :src="item.mall_icon" alt="">
         <p>{{item.title}}</p>
       </div>
-      <div class="flex-r pi-shop-line">
+      <div class="flex-r x-pi-shop-line">
         <p v-if="item.shop_name">【{{item.shop_name}}】</p>
       </div>
-      <div class="flex-r pi-line">
-        <div v-if="item.fl_commission" class="gborder gtcolor pi-box"><span>{{item.fl_commission}}</span></div>
-        <span class="pil-txt">销量：{{item.month_sales}}</span>
+      <div class="flex-r x-pi-line">
+        <div v-if="item.fl_commission" class="gborder gtcolor x-pi-box"><span>{{item.fl_commission}}</span></div>
+        <span class="x-pil-txt">销量：{{item.month_sales}}</span>
       </div>
-      <div class="flex-r pi-price-line">
-        <div class="pi-price">
+      <div class="flex-r x-pi-price-line">
+        <div class="x-pi-price">
           &yen;
           <big class="gtcolor">{{item.discount_price}} </big>
           <span>&yen;{{item.price}}</span>
@@ -32,7 +32,7 @@
 import Quan from './Quan';
 
 export default {
-  name: 'ZProductV',
+  name: 'XProductV',
   props: {
     item: {
       type: Object,
@@ -63,7 +63,7 @@ export default {
   align-items: center;
 }
 /* height280 = padding(40) + title(50) + shop(50) + line(80) + price(60) */
-.pitem {
+.x-pitem {
   position: relative;
   width: 100%;
   height: 2.8em;
@@ -74,7 +74,7 @@ export default {
   flex-direction: row;
   cursor: pointer;
 }
-.pitem::after {
+.x-pitem::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -84,29 +84,29 @@ export default {
   background: #E1E1E1;
   transform: scaleY(.5);
 }
-.pi-left {
+.x-pi-left {
   width: 2.4em;
   height: 2.4em;
   margin-right: 7px;
   background: #f6f6f6;
 }
-.pi-left img {
+.x-pi-left img {
   display: block;
   width: 100%;
   border-radius: .1em;
 }
-.pi-right {
+.x-pi-right {
   flex: 1;
   overflow: hidden;
 }
-.pi-title-line { height: .5em; }
-.pi-title-line img {
+.x-pi-title-line { height: .5em; }
+.x-pi-title-line img {
   width: .3em;
   height: .3em;
   margin-right: 6px;
   vertical-align: middle;
 }
-.pi-title-line p {
+.x-pi-title-line p {
   flex: 1;
   overflow: hidden;
   white-space: nowrap;
@@ -116,40 +116,40 @@ export default {
   color: black;
   margin: 0;
 }
-.pi-shop-line {
+.x-pi-shop-line {
   color: #333;
   height: .5em;
   white-space: nowrap;
   overflow: hidden;
 }
-.pi-shop-line p {
+.x-pi-shop-line p {
   font-size: .28em;
   margin: 0;
 }
-.pi-price-line {
+.x-pi-price-line {
   color: #323232;
   height: .6em;
 }
-.pi-price {
+.x-pi-price {
   font-size: .24em;
   color: #F72353;
 }
-.pi-price big {
+.x-pi-price big {
   font-size: 1.5em;
   font-weight: bold;
 }
-.pi-price span {
+.x-pi-price span {
   text-decoration: line-through;
   color: #666;
 }
-.pi-line {
+.x-pi-line {
   height: .8em;
   color: #666;
 }
-.pil-txt {
+.x-pil-txt {
   font-size: .24em;
 }
-.pi-box {
+.x-pi-box {
   color: #F72353;
   height: .36em;
   padding: 0 .2em;
@@ -159,7 +159,7 @@ export default {
   border: 1px solid #F72353;
   border-radius: .2em;
 }
-.pi-box span {
+.x-pi-box span {
   font-size: .28em;
 }
 </style>

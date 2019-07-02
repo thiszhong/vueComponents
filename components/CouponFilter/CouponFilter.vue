@@ -1,16 +1,16 @@
 <template>
-  <div @click.stop="onChange" class="coupon-filter">
+  <div @click.stop="onChange" class="x-coupon-filter">
     <span>仅显示有券商品</span>
-    <div class="z-switch">
-      <div class="z-switch-block" :style="{ width }"></div>
-      <div class="z-switch-handle"></div>
+    <div class="x-cf-switch">
+      <div class="x-cf-switch-block" :style="{ width }"></div>
+      <div class="x-cf-switch-handle"></div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ZCouponFilter',
+  name: 'XCouponFilter',
   props: {
     checked: {
       type: Boolean,
@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style>
-.coupon-filter {
+.x-coupon-filter {
   font-size: 14px;
   height: 34px;
   padding: 0 11px;
@@ -56,7 +56,7 @@ export default {
   align-items: center;
   background: white;
 }
-.z-switch {
+.x-cf-switch {
   width: 60px;
   height: 28px;
   background: #07c160;
@@ -65,7 +65,7 @@ export default {
   border: 1px solid #07c160;
   box-sizing: border-box;
 }
-.z-switch-handle {
+.x-cf-switch-handle {
   float: right;
   width: 26px;
   height: 26px;
@@ -75,7 +75,7 @@ export default {
   position: relative;
   z-index: 1;
 }
-.z-switch-block {
+.x-cf-switch-block {
   position: relative;
   float: right;
   height: 100%;
@@ -84,7 +84,7 @@ export default {
   border-radius: 0 13px 13px 0;
   transition: width .3s;
 }
-.z-switch-block::before {
+.x-cf-switch-block::before {
   content: '';
   width: 13px;
   height: 26px;

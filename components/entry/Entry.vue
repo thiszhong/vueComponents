@@ -1,11 +1,11 @@
 <template>
-  <div class="entry-wrap">
+  <div class="x-entry">
     <div v-for="(item, index) in list" :key="`${item.name || ''}${index}`" 
-      class="entry-item"
+      class="x-entry-item"
       :style="{width: itemWidth}"
       @click="itemClick(item, index)"
     >
-      <div class="entry-icon" :style="{borderRadius: borderRadius}">
+      <div class="x-entry-icon" :style="{borderRadius: borderRadius}">
         <img :src="item.cover || item.icon" alt="">
       </div>
       <span>{{item.title || item.name}}</span>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'ZEntry',
+  name: 'XEntry',
   props: {
     list: {
       type: Array,
@@ -46,14 +46,14 @@ export default {
 </script>
 
 <style>
-.entry-wrap {
+.x-entry {
   font-size: 12px;
   color: #444;
   text-align: center;
   overflow: hidden;
   margin: 5px 0;
 }
-.entry-item {
+.x-entry-item {
   float: left;
   text-align: center;
   height: 70px;
@@ -62,13 +62,13 @@ export default {
   overflow: hidden;
   cursor: pointer;
 }
-.entry-icon {
+.x-entry-icon {
   width: 40px;
   height: 40px;
   margin: 0 auto 3px;
   overflow: hidden;
 }
-.entry-icon img {
+.x-entry-icon img {
   width: 100%;
   height: 100%;
   display: block;

@@ -1,9 +1,9 @@
 <template>
-  <div @click="onClick" class="imgage-text">
-    <div v-if="image" class="it-image" :style="imgStyle">
+  <div @click="onClick" class="x-imgage-text">
+    <div v-if="image" class="x-it-image" :style="imgStyle">
       <img :src="image" alt="">
     </div>
-    <div v-if="text" class="it-text" :style="textStyle">
+    <div v-if="text" class="x-it-text" :style="textStyle">
       {{text}}
     </div>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'ZImageText',
+  name: 'XImageText',
   props: {
     image: {
       type: String,
@@ -38,22 +38,22 @@ export default {
 </script>
 
 <style>
-.imgage-text {
+.x-imgage-text {
   font-size: 14px;
   color: #0D0D0D;
   box-sizing: border-box;
 }
-.it-image {
+.x-it-image {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 7px;
   overflow: hidden;
 }
-.it-image img {
+.x-it-image img {
   display: block;
   width: 100%;
 }
-.it-text {
+.x-it-text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;

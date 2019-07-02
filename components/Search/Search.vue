@@ -1,8 +1,8 @@
 <template>
-  <div @click="onClick" class="z-search-box">
-    <div class="z-search-area" :class="{'z-search-area-focus': isFocus}">
-      <div class="z-search-icon"><img :src="icon" alt=""></div>
-      <div class="z-search-input">
+  <div @click="onClick" class="x-search-box">
+    <div class="x-search-area" :class="{'x-search-area-focus': isFocus}">
+      <div class="x-search-icon"><img :src="icon" alt=""></div>
+      <div class="x-search-input">
         <span v-if="isPlaceholder">{{placeholder}}</span>
         <input v-else type="search" id="xSearchInput" ref="search"
           v-model="innerValue"
@@ -13,15 +13,15 @@
           @keyup.enter="onSearch"
         />
       </div>
-      <div v-show="hasInput" @click="onClear" class="z-search-clear"></div>
+      <div v-show="hasInput" @click="onClear" class="x-search-clear"></div>
     </div>
-    <button v-if="!isPlaceholder" @click="onSearch" class="z-search-btn">搜索</button>
+    <button v-if="!isPlaceholder" @click="onSearch" class="x-search-btn">搜索</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ZSearch',
+  name: 'XSearch',
   model: {
     prop: 'value',
     event: 'input'
@@ -101,7 +101,7 @@ export default {
 </script>
 
 <style>
-.z-search-box {
+.x-search-box {
   position: relative;
   height: 33px;
   display: flex;
@@ -109,7 +109,7 @@ export default {
   align-items: center;
   padding: .2em .4em;
 }
-.z-search-area {
+.x-search-area {
   font-size: 15px;
   position: relative;
   height: 100%;
@@ -124,28 +124,28 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
 }
-/* .z-search-area-focus, .z-search-area:hover {
+/* .x-search-area-focus, .x-search-area:hover {
   border-color: white;
   box-shadow: 0 0 7px #ddd;
 } */
-.z-search-icon {
+.x-search-icon {
   width: 60px;
   height: 20px;
   text-align: right;
   overflow: hidden;
   transition: all .3s;
 }
-.z-search-area-focus .z-search-icon {
+.x-search-area-focus .x-search-icon {
   width: 0;
   opacity: 0;
 }
-.z-search-icon img {
+.x-search-icon img {
   width: 20px;
   height: 20px;
   display: inline-block;
   vertical-align: middle;
 }
-.z-search-input {
+.x-search-input {
   position: relative;
   flex: 1;
   white-space: nowrap;
@@ -155,17 +155,17 @@ export default {
   padding-right: 35px;
   box-sizing: border-box;
 }
-.z-search-input input {
+.x-search-input input {
   width: 100%;
   height: 100%;
   font-size: 15px;
   border: 0;
   outline: none;
 }
-.z-search-input input::-webkit-search-cancel-button{
+.x-search-input input::-webkit-search-cancel-button{
   -webkit-appearance: none;
 }
-.z-search-clear {
+.x-search-clear {
   width: 30px;
   height: 100%;
   background: white url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAIVBMVEVHcEza2trb29vb29vb29va2trb29vf39/c3Nzb29vb29shSHhRAAAACnRSTlMAoYDP7J9mGlBAGFod+gAAAQ9JREFUSMetltsSwyAIRKOCF/7/g9tc2kFZY+iUt8zsUVgVsm1/iNLiEa08UVcm+QZxXawdlfpi4s0+2cgPJM+WTzKJBDepJNMgUEqW28hOvSGqLKPLqtAaIF15kgeRHAUMZaiEQjDrJptU1LsOBOt84wVQl2YY9Aoga2nuifD+ZGNtkBkx6o8NdUYDYfSnswWYF7BeZPepCSaQXlpnakdA/WFsnB6p1c+AkwD6KcDG7nvgtBsRGNj1zJCIyFY+84dEAwfHn3oRUezVUP5bgqzd3Xkxuu399R7OdyQqekC8fED9E+UHT1Q1gZSeNAF3m/E3Mn+rdDdjf7v3DxT/yPIPRf/Y/WGw+38dfvk5WcULbnk4DDaH0NAAAAAASUVORK5CYII=') center no-repeat;
@@ -174,7 +174,7 @@ export default {
   right: 0;
   top: 0;
 }
-.z-search-btn {
+.x-search-btn {
   font-size: 15px;
   color: white;
   width: 54px;
@@ -186,7 +186,7 @@ export default {
   border-radius: 5px;
   outline: none;
 }
-.z-search-btn:active {
+.x-search-btn:active {
   transform: scale(1.1)
 }
 </style>

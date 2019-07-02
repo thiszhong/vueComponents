@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'ZScrollableBar',
+  name: 'XScrollableBar',
   props: {
     list: {
       type: Array,

@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'ZCoupon',
+  name: 'XCoupon',
   props: {
     amount: {
       type: Number,

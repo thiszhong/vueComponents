@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'ZSectionTitle',
+  name: 'XSectionTitle',
   props: {
     title: {
       type: String

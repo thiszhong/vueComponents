@@ -26,12 +26,12 @@ export default {
   data () {
     return {
       list: [
-        {name: '愚蠢', image: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
-        {name: '愚蠢', image: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
-        {name: '愚蠢', image: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
-        {name: '愚蠢', image: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
-        {name: '愚蠢', image: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
-        {name: '愚蠢', image: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
+        {name: '愚蠢', cover: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
+        {name: '愚蠢', cover: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
+        {name: '愚蠢', cover: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
+        {name: '愚蠢', cover: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
+        {name: '愚蠢', cover: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
+        {name: '愚蠢', cover: 'https://img.alicdn.com/imgextra/i3/42843867/O1CN01BSNwjh1eR84mgEUdW_!!42843867.jpg_300x300.jpg'},
       ]
     }
   },
