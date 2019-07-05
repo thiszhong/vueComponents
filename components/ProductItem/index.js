@@ -1,3 +1,3 @@
-import ProductV from './product-v'
+import ProductV from './ProductV'
 
 export default ProductV

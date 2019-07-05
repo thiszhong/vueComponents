@@ -5,12 +5,12 @@ export default [
     component: () => import(/* webpackChunkName: "hello" */ '../components_demo/HelloWorld.vue')
   },
   {
-    path: '/ProductV',
-    name: 'ProductV',
+    path: '/ProductItem',
+    name: 'ProductItem',
     meta: {
-      title: '商品item竖版'
+      title: '商品item'
     },
-    component: () => import(/* webpackChunkName: "hello" */ '../components_demo/ProductItemV')
+    component: () => import(/* webpackChunkName: "hello" */ '../components_demo/ProductItem')
   },
   {
     path: '/Search',

@@ -1,38 +1,49 @@
 <template>
-  <div @click="onClick" class="x-pitem">
-    <div class="x-pi-left">
+  <!-- 商品item，一行放一个的那种 -->
+  <div @click="onClick" class="x-product-v">
+    <div class="x-pv-left">
       <img v-if="lazy" v-lazy="item.cover_image" alt="">
       <img v-else :src="item.cover_image" alt="">
     </div>
-    <div class="x-pi-right">
-      <div class="flex-r x-pi-title-line">
-        <img :src="item.mall_icon" alt="">
-        <p>{{item.title}}</p>
-      </div>
-      <div class="flex-r x-pi-shop-line">
+    <div class="x-pv-right">
+      <!-- title -->
+      <ProductTitle :icon="item.mall_icon" :title="item.title" />
+      <!-- shop -->
+      <div class="flex_r_sb x-pv-shop-line">
         <p v-if="item.shop_name">【{{item.shop_name}}】</p>
       </div>
-      <div class="flex-r x-pi-line">
-        <div v-if="item.fl_commission" class="gborder gtcolor x-pi-box"><span>{{item.fl_commission}}</span></div>
-        <span class="x-pil-txt">销量：{{item.month_sales}}</span>
+      <!-- 佣金 & 销量 -->
+      <div class="flex_r_sb x-pv-line">
+        <ProductZhuan :value="item.fl_commission" />
+        <ProductText :value="`销量：${item.month_sales}`" />
       </div>
-      <div class="flex-r x-pi-price-line">
-        <div class="x-pi-price">
-          &yen;
-          <big class="gtcolor">{{item.discount_price}} </big>
-          <span>&yen;{{item.price}}</span>
+      <div class="flex_r_sb x-pv-price-line">
+        <div style="font-size: 16px;">
+          <ProductPrice :value="item.discount_price" />
+          <ProductText :value="`&yen;${item.price}`" line-through />
         </div>
-        <Quan :value="item.coupon_money_text" />
+        <ProductQuan :value="item.coupon_money_text" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Quan from './Quan';
+import ProductQuan from './ProductQuan'
+import ProductTitle from './ProductTitle'
+import ProductZhuan from './ProductZhuan'
+import ProductText from './ProductText'
+import ProductPrice from './ProductPrice'
 
 export default {
   name: 'XProductV',
+  components: {
+    ProductQuan,
+    ProductTitle,
+    ProductZhuan,
+    ProductText,
+    ProductPrice
+  },
   props: {
     item: {
       type: Object,
@@ -43,9 +54,6 @@ export default {
       default: false
     }
   },
-  components: {
-    Quan
-  },
   methods: {
     onClick() {
       this.$emit('click', this.item)
@@ -55,111 +63,64 @@ export default {
 </script>
 
 
-<style scoped>
-.flex-r {
+<style>
+.flex_r_sb {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-/* height280 = padding(40) + title(50) + shop(50) + line(80) + price(60) */
-.x-pitem {
+.x-product-v {
+  line-height: 20px;
   position: relative;
   width: 100%;
-  height: 2.8em;
-  padding: .2em;
+  height: 140px;
+  padding: 10px;
   box-sizing: border-box;
   background: white;
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
-.x-pitem::after {
+.x-product-v::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 2.6em;
-  right: .2em;
+  left: 130px;
+  right: 10px;
   height: 1px;
   background: #E1E1E1;
   transform: scaleY(.5);
 }
-.x-pi-left {
-  width: 2.4em;
-  height: 2.4em;
+.x-pv-left {
+  width: 120px;
+  height: 120px;
   margin-right: 7px;
   background: #f6f6f6;
 }
-.x-pi-left img {
+.x-pv-left img {
   display: block;
   width: 100%;
   border-radius: .1em;
 }
-.x-pi-right {
+.x-pv-right {
   flex: 1;
   overflow: hidden;
 }
-.x-pi-title-line { height: .5em; }
-.x-pi-title-line img {
-  width: .3em;
-  height: .3em;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-.x-pi-title-line p {
-  flex: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: .3em;
-  font-weight: 400;
-  color: black;
-  margin: 0;
-}
-.x-pi-shop-line {
+.x-pv-shop-line {
   color: #333;
-  height: .5em;
+  height: 24px;
   white-space: nowrap;
   overflow: hidden;
 }
-.x-pi-shop-line p {
-  font-size: .28em;
+.x-pv-shop-line p {
+  font-size: 14px;
   margin: 0;
 }
-.x-pi-price-line {
-  color: #323232;
-  height: .6em;
+.x-pv-price-line {
+  height: 30px;
 }
-.x-pi-price {
-  font-size: .24em;
-  color: #F72353;
-}
-.x-pi-price big {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-.x-pi-price span {
-  text-decoration: line-through;
-  color: #666;
-}
-.x-pi-line {
-  height: .8em;
-  color: #666;
-}
-.x-pil-txt {
-  font-size: .24em;
-}
-.x-pi-box {
-  color: #F72353;
-  height: .36em;
-  padding: 0 .2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #F72353;
-  border-radius: .2em;
-}
-.x-pi-box span {
-  font-size: .28em;
+.x-pv-line {
+  height: 40px;
 }
 </style>

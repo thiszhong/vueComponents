@@ -1,4 +1,5 @@
 import ProductV from './components/ProductV'
+import ProductH from './components/ProductH'
 import Search from './components/Search'
 import SortBar from './components/SortBar'
 import CouponFilter from './components/CouponFilter'
@@ -11,6 +12,7 @@ import SectionTitle from './components/SectionTitle'
 
 const components = {
   ProductV,
+  ProductH,
   Search,
   SortBar,
   CouponFilter,
@@ -24,6 +26,7 @@ const components = {
 
 export {
   ProductV,
+  ProductH,
   Search,
   SortBar,
   CouponFilter,
