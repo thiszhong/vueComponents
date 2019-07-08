@@ -1,7 +1,7 @@
 <template>
-  <div v-if="value" class="x-product-quan">
+  <button v-if="value" class="x-product-quan">
     {{value}}
-  </div>
+  </button>
 </template>
 
 <script>
@@ -24,6 +24,8 @@ export default {
   height: 20px;
   background-image: linear-gradient(to right, #F72353, #FD935F);
   border-radius: 4px;
+  border: 0;
+  outline: none;
 }
 .x-product-quan::before, .x-product-quan::after {
   content: '';

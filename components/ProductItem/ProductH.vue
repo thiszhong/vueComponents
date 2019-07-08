@@ -1,6 +1,6 @@
 <template>
   <!-- 商品item，一行可以放两个的那种 -->
-  <div class="x-product-h-wrap">
+  <div @click="onClick" class="x-product-h-wrap">
     <div class="x-product-h">
       <div class="x-ph-img">
         <img v-if="lazy" v-lazy="item.cover_image" alt="">
@@ -11,11 +11,11 @@
         <div class="x-ph-line">
           <ProductZhuan :value="item.fl_commission" />
         </div>
-        <div class="flex-r x-ph-price-line">
+        <div class="flex_r_sb x-ph-price-line">
           <ProductPrice :value="item.discount_price" />
           <ProductQuan :value="item.coupon_money_text" />
         </div>
-        <div class="flex-r">
+        <div class="flex_r_sb">
           <ProductText :value="`&yen;${item.price}`" line-through />
           <ProductText :value="`销量:${item.month_sales}`" />
         </div>
@@ -59,7 +59,7 @@ export default {
 </script>
 
 <style lang="less">
-.flex-r {
+.flex_r_sb {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,9 +67,10 @@ export default {
 }
 .x-product-h-wrap {
   font-size: 16px;
-  width: 50%;
+  width: 49%;
   float: left;
-  padding: 0 2%;
+  padding-left: 2%;
+  padding-bottom: 2%;
   box-sizing: border-box;
 }
 .x-product-h {
