@@ -18,27 +18,29 @@ export default {
 <style scoped>
 .x-product-quan {
   position: relative;
-  font-size: 13px;
+  font-size: .24rem;
   color: white;
-  padding: 0 5px;
-  height: 20px;
-  background-image: linear-gradient(to right, #F72353, #FD935F);
-  border-radius: 4px;
+  padding: 0 .14rem;
+  height: .36rem;
+  min-height: 18px;
+  line-height: normal;
+  background-image: linear-gradient(to right, #FF2C23, #FF837D);
+  border-radius: 3px;
   border: 0;
   outline: none;
 }
 .x-product-quan::before, .x-product-quan::after {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: .12rem;
+  height: .12rem;
   position: absolute;
-  top: 6px;
-  right: -4px;
+  top: .12rem;
+  right: -.06rem;
   background: white;
   border-radius: 50%;
 }
 .x-product-quan::before {
-  left: -4px;
+  left: -.06rem;
 }
 </style>
 

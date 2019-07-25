@@ -1,7 +1,7 @@
 <template>
   <div class="x-section-title">
     <h3 :class="{'xst-lump': type === 'lump', 'xst-circle': type === 'circle'}">
-      <span style="vertical-align: middle;">{{title}}</span>
+      <span>{{title}}</span>
     </h3>
   </div>
 </template>
@@ -23,18 +23,24 @@ export default {
 
 <style>
 .x-section-title {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   height: 40px;
   line-height: 40px;
 }
 .x-section-title h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
-  color: #0D0D0D;
+  color: #333;
   margin: 0;
   padding: 0;
   display: inline-block;
+}
+.x-section-title h3 span {
+  display: inline-block;
+  padding: 0 12px;
+  vertical-align: middle;
+  transform: translateY(1px);
 }
 .xst-lump::before, 
 .xst-lump::after,
@@ -43,9 +49,14 @@ export default {
   content: '';
   display: inline-block;
   vertical-align: middle;
-  width: 25px;
-  height: 40px;
+  width: 13px;
+  height: 14px;
   background-size: contain!important;
+}
+.xst-circle::before,
+.xst-circle::after {
+  width: 20px;
+  height: 9px;
 }
 .xst-lump::before {
   background: url('./t2-l.png') center no-repeat;

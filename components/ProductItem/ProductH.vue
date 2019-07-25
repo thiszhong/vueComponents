@@ -1,27 +1,27 @@
 <template>
   <!-- 商品item，一行可以放两个的那种 -->
-  <div @click="onClick" class="x-product-h-wrap">
-    <div class="x-product-h">
-      <div class="x-ph-img">
-        <img v-if="lazy" v-lazy="item.cover_image" alt="">
-        <img v-else :src="item.cover_image" alt="">
+  <!-- <div @click="onClick" class="x-product-h-wrap"> -->
+  <div @click="onClick" class="x-product-h">
+    <div class="x-ph-img">
+      <img v-if="lazy" v-lazy="item.cover_image" alt="">
+      <img v-else :src="item.cover_image" alt="">
+    </div>
+    <div class="x-ph-content">
+      <ProductTitle :icon="item.mall_icon" :title="item.title" />
+      <div class="flex_r_sb x-ph-zhuan-line">
+        <ProductZhuan :value="item.fl_commission" small />
       </div>
-      <div class="x-ph-content">
-        <ProductTitle :icon="item.mall_icon" :title="item.title" />
-        <div class="x-ph-line">
-          <ProductZhuan :value="item.fl_commission" />
-        </div>
-        <div class="flex_r_sb x-ph-price-line">
-          <ProductPrice :value="item.discount_price" />
-          <ProductQuan :value="item.coupon_money_text" />
-        </div>
-        <div class="flex_r_sb">
-          <ProductText :value="`&yen;${item.price}`" line-through />
-          <ProductText :value="`销量:${item.month_sales}`" />
-        </div>
+      <div class="flex_r_sb x-ph-price-line">
+        <ProductPrice :value="item.discount_price" lite />
+        <ProductQuan :value="item.coupon_money_text" />
+      </div>
+      <div class="flex_r_sb x-ph-line">
+        <ProductText :value="`&yen;${item.price}`" line-through />
+        <ProductText :value="`销量:${item.month_sales}`" />
       </div>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -65,17 +65,20 @@ export default {
   align-items: center;
   width: 100%;
 }
-.x-product-h-wrap {
-  font-size: 16px;
-  width: 49%;
-  float: left;
-  padding-left: 2%;
-  padding-bottom: 2%;
-  box-sizing: border-box;
-}
+// .x-product-h-wrap {
+//   font-size: 16px;
+//   width: 49%;
+//   float: left;
+//   padding-left: 2%;
+//   padding-bottom: 2%;
+//   box-sizing: border-box;
+// }
 .x-product-h {
+  width: 3.42rem;
+  height: 5.39rem;
+  margin-top: .24rem;
   background: white;
-  border-radius: 5px;
+  border-radius: .16rem;
   overflow: hidden;
   .x-ph-img {
     width: 100%;
@@ -88,13 +91,16 @@ export default {
     }
   }
   .x-ph-content {
-    padding: 3px 5px;
+    padding: 4px .12rem;
+  }
+  .x-ph-zhuan-line {
+    height: .44rem;
   }
   .x-ph-line {
-    padding: 3px 0;
+    height: .34rem;
   }
   .x-ph-price-line {
-    height: 30px;
+    height: .56rem;
   }
 }
 </style>

@@ -20,8 +20,8 @@ export default {
 
 <style>
 .x-product-text {
-  font-size: 12px;
-  color: #666;
+  font-size: .24rem;
+  color: #999;
 }
 .x-text_linethrough {
   text-decoration: line-through;

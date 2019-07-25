@@ -1,14 +1,17 @@
 <template>
-  <span class="x-product-price">
-    <i :class="{'x-symbol_small': smallSymbol}">&yen;</i>
-    {{value}}
-  </span>
+  <div class="x-product-price">
+    <span v-if="!lite">券后</span><i>&yen;</i>{{value}}
+  </div>
 </template>
 
 <script>
 export default {
   name: 'XProductPrice',
   props: {
+    lite: {
+      type: Boolean,
+      default: false
+    },
     value: {
       type: String
     },
@@ -22,15 +25,22 @@ export default {
 
 <style lang="less">
 .x-product-price {
-  font-size: 18px;
-  font-weight: 600;
-  color: #F72353;
-  line-height: 1;
+  display: inline-block;
+  font-size: .4rem;
+  font-weight: 700;
+  color: #FE3C4A;
+  line-height: normal;
+  span {
+    font-size: .24rem;
+    color: #999;
+    font-weight: normal;
+    vertical-align: middle;
+  }
   i {
     font-style: normal;
+    font-size: .24rem;
+    display: inline-block;
+    transform: scale(.92) translateY(4%);
   }
-}
-.x-symbol_small {
-  font-size: 12px;
 }
 </style>

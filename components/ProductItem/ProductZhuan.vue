@@ -1,5 +1,5 @@
 <template>
-  <button v-if="value" class="x-zhuan">{{value}}</button>
+  <button v-if="value" class="x-zhuan" :style="{height: small ? '.32rem' : '.4rem'}">{{value}}</button>
 </template>
 
 <script>
@@ -8,6 +8,10 @@ export default {
   props: {
     value: {
       type: String
+    },
+    small: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -15,21 +19,15 @@ export default {
 
 <style>
 .x-zhuan {
-  font-size: 13px;
-  line-height: 1.2;
-  color: #F72353;
-  padding: 0 .5em;
-  border: 1px solid #F72353;
-  border-radius: 15px;
+  font-size: .24rem;
+  height: .4rem;
+  min-height: 16px;
+  line-height: normal;
+  color: #FF2C23;
+  padding: 0 .1rem;
+  border: 0;
+  border-radius: 2px;
   outline: none;
-  background: transparent;
-}
-.x-zhuan::before {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  width: 0;
-  height: 100%;
-  margin-top: 1px;
+  background: #FFE7E6;
 }
 </style>

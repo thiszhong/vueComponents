@@ -92,10 +92,11 @@ export default {
   width: 100%;
   height: 44px;
   font-size: 14px;
-  color: black;
+  color: #333;
   white-space: nowrap;
   overflow: hidden;
   background: white;
+  border-bottom: 1px solid #f6f6ff;
 }
 .xs_pc_env {
   /* 默认滚动条宽度为17px */
@@ -116,16 +117,16 @@ export default {
   cursor: pointer;
 }
 .x-si-active {
-  color: #F72353;
+  color: #FF2C23;
 }
 .x-si-active::after {
   content: '';
   position: absolute;
   left: 20px;
   right: 20px;
-  bottom: 10px;
-  height: 1px;
-  background: #F72353;
+  bottom: 0;
+  height: 2px;
+  background: #FF2C23;
 }
 </style>
 

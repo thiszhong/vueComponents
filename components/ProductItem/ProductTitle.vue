@@ -21,20 +21,22 @@ export default {
 
 <style lang="less">
 .x-product-title {
-  height: 26px;
+  height: .44rem;
   display: flex;
   align-items: center;
   width: 100%;
   img {
-    width: 15px;
-    height: 15px;
+    width: .32rem;
+    height: .32rem;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 4px;
   }
   h4 {
+    color: #333;
     margin: 0;
-    font-size: 15px;
+    font-size: .3rem;
     font-weight: 500;
+    line-height: normal;
     flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -2,11 +2,11 @@
   <div v-if="amount > 0" @click="onClick" class="x-coupon" :style="{background: bgColor}">
     <div class="xc-inner">
       <div class="x-coupon-l">
-        <p style="font-size: .36em;font-weight: 700;">{{amount}}元优惠券</p>
-        <p style="font-size: .24em;">{{validity}}</p>
+        <p style="font-size: .36rem;font-weight: 700;">{{amount}}元优惠券</p>
+        <p style="font-size: .24rem;">{{validity}}</p>
       </div>
       <div class="x-coupon-r">
-        <span style="font-size: .3em;font-weight: 700;">立即领取</span>
+        <span style="font-size: .3rem;font-weight: 700;">立即领取</span>
       </div>
     </div>
     <div class="xc-badge xcb-lt" :style="{background: bgColor}"></div>
@@ -57,7 +57,7 @@ export default {
   position: relative;
   color: #FE5E7A;
   line-height: 22px;
-  height: 1.2em;;
+  height: 1.2rem;
   overflow: hidden;
   cursor: default;
 }
@@ -91,7 +91,7 @@ export default {
   margin: 0;
 }
 .x-coupon-r {
-  width: 1.9em;
+  width: 1.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,36 +99,36 @@ export default {
 
 .xc-badge {
   position: absolute;
-  width: .4em;
-  height: .4em;
+  width: .4rem;
+  height: .4rem;
   background: white;
   border: 1px solid #FE5E7A;
   border-radius: 50%;
 }
 .xcb-lt {
-  top: -.2em;
-  left: -.2em;
+  top: -.2rem;
+  left: -.2rem;
 }
 .xcb-lb {
-  bottom: -.2em;
-  left: -.2em;
+  bottom: -.2rem;
+  left: -.2rem;
 }
 .xcb-rt {
-  top: -.2em;
-  right: -.2em;
+  top: -.2rem;
+  right: -.2rem;
 }
 .xcb-rb {
-  bottom: -.2em;
-  right: -.2em;
+  bottom: -.2rem;
+  right: -.2rem;
 }
 .xcb-mt, .xcb-mb {
-  width: .3em;
-  height: .3em;
-  bottom: -.15em;
-  right: 1.76em;
+  width: .3rem;
+  height: .3rem;
+  bottom: -.15rem;
+  right: 1.76rem;
 }
 .xcb-mt {
-  top: -.15em;
+  top: -.15rem;
 }
 </style>
 

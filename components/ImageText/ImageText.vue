@@ -3,8 +3,8 @@
     <div v-if="image" class="x-it-image" :style="imgStyle">
       <img :src="image" alt="">
     </div>
-    <div v-if="text" class="x-it-text" :style="textStyle">
-      {{text}}
+    <div v-if="!onlyImage" class="x-it-text" :style="textStyle">
+      <p>{{text}}</p>
     </div>
   </div>
 </template>
@@ -13,13 +13,17 @@
 export default {
   name: 'XImageText',
   props: {
+    onlyImage: {
+      type: Boolean,
+      default: true
+    },
     image: {
       type: String,
-      default: null
+      default: require('../../src/assets/image-placeholder.jpg')
     },
     text: {
       type: String,
-      default: null
+      default: '文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字...'
     },
     imgStyle: {
       type: Object,
@@ -37,16 +41,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .x-imgage-text {
-  font-size: 14px;
-  color: #0D0D0D;
+  font-size: .3rem;
+  color: #333;
+  margin: .16rem .24rem;
   box-sizing: border-box;
+  background: white;
+  border-radius: .16rem;
+  overflow: hidden;
 }
 .x-it-image {
   width: 100%;
   box-sizing: border-box;
-  margin-bottom: 7px;
   overflow: hidden;
 }
 .x-it-image img {
@@ -54,10 +61,19 @@ export default {
   width: 100%;
 }
 .x-it-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
+  padding: 8px 14px;
+  p {
+    font-weight: 700;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    text-overflow: ellipsis;
+  }
 }
 </style>
 
