@@ -1,18 +1,18 @@
 <template>
   <div v-if="listLength" class="x-channel">
     <!-- list length 1-4 -->
-    <component v-if="listLength < 5" :is="channelDetailName" @click="itemClick" :list="list" :horzontal="horzontal"></component>
+    <component v-if="listLength < 5" :is="channelDetailName" @click="itemClick" :list="list" :horizontal="horizontal"></component>
     <!-- list length 5 -->
     <template v-else-if="listLength === 5">
       <Channel2 @click="itemClick" :list="list" />
       <div class="x-channel-separator"></div>
-      <Channel3 @click="itemClick(2 + $event)" :list="list.slice(2, 5)" :horzontal="true" />
+      <Channel3 @click="itemClick(2 + $event)" :list="list.slice(2, 5)" :horizontal="true" />
     </template>
     <!-- list length 6 -->
     <template v-else>
-      <Channel3 @click="itemClick" :list="list.slice(0, 3)" :horzontal="true" />
+      <Channel3 @click="itemClick" :list="list.slice(0, 3)" :horizontal="true" />
       <div class="x-channel-separator"></div>
-      <Channel3 @click="itemClick(3 + $event)" :list="list.slice(3, 6)" :horzontal="true" />
+      <Channel3 @click="itemClick(3 + $event)" :list="list.slice(3, 6)" :horizontal="true" />
     </template>
   </div>
 </template>
@@ -34,9 +34,8 @@ export default {
       type: Array,
       required: true
     },
-    horzontal: {
-      type: Boolean, // 当listLength为3时有两种排版，horaontal为true是展示为一行的样式
-      default: true
+    horizontal: {
+      type: Boolean // 当listLength为3时有两种排版，horaontal为true是展示为一行的样式
     }
   },
   computed: {

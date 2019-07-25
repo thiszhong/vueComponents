@@ -29,14 +29,14 @@
       </div>
     </div>
 
-    <Channel @click="itemClick" :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" />
+    <Channel @click="itemClick" :list="injectList" :horizontal="horizontal" :style="{padding: '20px'}" />
 
     <pre>
-      &lt;Channel :list="injectList" :horzontal="horzontal" :style="{padding: '20px'}" /&gt;
+      &lt;Channel :list="injectList" :horizontal="horizontal" :style="{padding: '20px'}" /&gt;
 
       Props:
         list: Array 数据
-        horzontal: Boolean 仅list.length === 3时有效，此个数下有两种排版样式
+        horizontal: Boolean 仅list.length === 3时有效，此个数下有两种排版样式
         style: Object(style) 根节点样式
       Event:
         click: params(item, index)
@@ -60,7 +60,7 @@ export default {
         {image: 'https://img.alicdn.com/imgextra/i4/628491863/TB2lnPHXdsmyKJjSZFvXXcE.FXa_!!628491863.jpg_300x300.jpg'},
       ],
       displayCount: 4,
-      horzontal: false
+      horizontal: false
     }
   },
   computed: {
@@ -72,8 +72,8 @@ export default {
     onSelect (count) {
       this.displayCount = count
     },
-    setStyle (horzontal) {
-      this.horzontal = horzontal
+    setStyle (horizontal) {
+      this.horizontal = horizontal
     },
     itemClick (item, index) {
       alert('Click ' + index + ' itemData: ' + JSON.stringify(item))

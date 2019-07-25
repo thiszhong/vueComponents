@@ -1,6 +1,6 @@
 <template>
   <!-- Channel有3个元素 -->
-  <div v-if="horzontal" class="x-channel-flex x-channel3">
+  <div v-if="horizontal" class="x-channel-flex x-channel3">
     <div @click="$emit('click', 0)" class="x-channel-item x-channel-item-w230h250">
       <div class="x-img-wrapper">
         <img :src="list[0].cover || placeholder3" alt="" srcset="">
@@ -48,7 +48,7 @@ export default {
   name: 'XChannel3',
   props: {
     list: Array,
-    horzontal: {
+    horizontal: {
       type: Boolean, // 当listLength为3时有两种排版，horaontal为true是展示为一行的样式
       default: false
     }
