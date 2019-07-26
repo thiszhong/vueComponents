@@ -9,8 +9,9 @@
         <img :src="item.cover || item.icon" alt="">
       </div>
       <p class="x-entry-title">{{item.title || item.name}}</p>
+      <p v-if="item.subtitleType > 2" class="x-entry-subtitle">{{item.subtitleValue}}</p>
       <p
-        v-if="item.subtitleType > 0"
+        v-else-if="item.subtitleType > 0"
         class="x-entry-subtitle"
       >{{item.subtitleType === 2 ? '最多省' : '最高返'}}<span>{{item.subtitleValue}}%</span></p>
     </div>
@@ -83,6 +84,7 @@ export default {
   line-height: 1;
   color: #9A9A9A;
   margin-top: .08rem;
+  white-space: nowrap;
   span {
     color: #FF2455;
   }
