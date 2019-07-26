@@ -146,8 +146,7 @@ export default {
 .x-search-icon img {
   width: 17px;
   height: 17px;
-  display: inline-block;
-  vertical-align: middle;
+  float: right;
 }
 .x-search-input {
   line-height: 20px;
