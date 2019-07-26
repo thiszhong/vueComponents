@@ -27,7 +27,7 @@ export default {
 .x-product-price {
   display: inline-block;
   font-size: .4rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #FE3C4A;
   line-height: normal;
   span {
