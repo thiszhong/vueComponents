@@ -35,7 +35,7 @@ export default {
     },
     color: {
       type: String,
-      default: '#F72353'
+      default: '#FF2C23'
     },
     index: {
       type: Number
