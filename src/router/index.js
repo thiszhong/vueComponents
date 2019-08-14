@@ -12,7 +12,6 @@ const router = new Router({
 })
 
 router.afterEach((to) => {
-  console.log(1234, to.name)
   if (!resources[to.name]) return
   if (!window.diyIFrameReady) {
     console.info('add diyIFrameReadyCallback')

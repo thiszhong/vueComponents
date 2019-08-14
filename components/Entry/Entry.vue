@@ -8,12 +8,20 @@
       <div class="x-entry-icon">
         <img :src="item.cover || item.icon" alt="">
       </div>
-      <p class="x-entry-title">{{item.title || item.name}}</p>
+      <p class="x-entry-title">{{item.title || item.name || '标题'}}</p>
       <p v-if="item.subtitleType > 2" class="x-entry-subtitle">{{item.subtitleValue}}</p>
       <p
         v-else-if="item.subtitleType > 0"
         class="x-entry-subtitle"
       >{{item.subtitleType === 2 ? '最多省' : '最高返'}}<span>{{item.subtitleValue}}%</span></p>
+      <!-- 上面两个为暂时兼容之前/线上的 -->
+      <template v-else-if="showSubtitle">
+        <p
+          v-if="item.subtitlePart1 || item.subtitlePart2"
+          class="x-entry-subtitle"
+        >{{item.subtitlePart1}}<span>{{item.subtitlePart2}}</span></p>
+        <p v-else class="x-entry-subtitle">副<span>标题</span></p>
+      </template>
     </div>
   </div>
 </template>
@@ -28,6 +36,10 @@ export default {
     },
     column: {
       type: Number
+    },
+    showSubtitle: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -45,12 +57,12 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .x-entry {
   font-size: 12px;
   text-align: center;
   overflow: hidden;
-  margin: .16rem .24rem;
+  padding: .16rem .24rem;
   transform: translateY(.08rem);
 }
 .x-entry-item {
@@ -67,6 +79,8 @@ export default {
   text-align: center;
   overflow: hidden;
   margin-bottom: .16rem;
+  background: url('../../src/assets/placeholder/ph-icon.png') center no-repeat;
+  background-size: auto 100%;
 }
 .x-entry-icon img {
   height: 100%;
@@ -85,9 +99,9 @@ export default {
   color: #9A9A9A;
   margin-top: .08rem;
   white-space: nowrap;
-  span {
-    color: #FF2455;
-  }
+}
+.x-entry-subtitle span {
+  color: #FF2455;
 }
 </style>
 

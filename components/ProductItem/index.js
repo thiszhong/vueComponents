@@ -1,3 +1,3 @@
-import ProductV from './ProductV'
+import ProductItem from './ProductItem'
 
-export default ProductV
+export default ProductItem

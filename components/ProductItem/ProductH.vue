@@ -58,49 +58,50 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .flex_r_sb {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-// .x-product-h-wrap {
-//   font-size: 16px;
-//   width: 49%;
-//   float: left;
-//   padding-left: 2%;
-//   padding-bottom: 2%;
-//   box-sizing: border-box;
-// }
+/* .x-product-h-wrap {
+  font-size: 16px;
+  width: 49%;
+  float: left;
+  padding-left: 2%;
+  padding-bottom: 2%;
+  box-sizing: border-box;
+} */
 .x-product-h {
-  width: 3.42rem;
+  /* width: 3.42rem; */
+  width: 49%;
   height: 5.39rem;
   margin-top: .24rem;
   background: white;
   border-radius: .16rem;
   overflow: hidden;
-  .x-ph-img {
-    width: 100%;
-    height: 0;
-    padding-bottom: 100%;
-    overflow: hidden;
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-  .x-ph-content {
-    padding: 4px .12rem;
-  }
-  .x-ph-zhuan-line {
-    height: .44rem;
-  }
-  .x-ph-line {
-    height: .34rem;
-  }
-  .x-ph-price-line {
-    height: .56rem;
-  }
+}
+.x-ph-img {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+.x-ph-img img {
+  display: block;
+  width: 100%;
+}
+.x-ph-content {
+  padding: 4px .12rem;
+}
+.x-ph-zhuan-line {
+  height: .44rem;
+}
+.x-ph-line {
+  height: .34rem;
+}
+.x-ph-price-line {
+  height: .56rem;
 }
 </style>

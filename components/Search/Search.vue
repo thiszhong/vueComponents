@@ -1,21 +1,23 @@
 <template>
-  <div @click="onClick" class="x-search-box" :class="{'x-search-focus': isFocus}">
-    <div class="x-search-icon"><img :src="icon" alt=""></div>
-    <div class="x-search-area">
-      <div class="x-search-input">
-        <span v-if="isPlaceholder">{{placeholder}}</span>
-        <input v-else type="search" id="xSearchInput" ref="search"
-          v-model="innerValue"
-          :placeholder="placeholder"
-          :autofocus="focus"
-          @focus="onFocus"
-          @blur="onBlur"
-          @keyup.enter="onSearch"
-        />
+  <div style="padding: .16rem .24rem">
+    <div @click="onClick" class="x-search-box" :class="{'x-search-focus': isFocus}" :style="boxStyle">
+      <div class="x-search-icon"><img :src="icon" alt=""></div>
+      <div class="x-search-area">
+        <div class="x-search-input">
+          <span v-if="isPlaceholder">{{placeholder || '复制商品标题或链接，领优惠券再返利'}}</span>
+          <input v-else type="search" id="xSearchInput" ref="search"
+            v-model="innerValue"
+            :placeholder="placeholder || '复制商品标题或链接，领优惠券再返利'"
+            :autofocus="focus"
+            @focus="onFocus"
+            @blur="onBlur"
+            @keyup.enter="onSearch"
+          />
+        </div>
+        <div v-show="hasInput" @click="onClear" class="x-search-clear"></div>
       </div>
-      <div v-show="hasInput" @click="onClear" class="x-search-clear"></div>
+      <button @click="onSearch" class="x-search-btn">搜索</button>
     </div>
-    <button @click="onSearch" class="x-search-btn">搜索</button>
   </div>
 </template>
 
@@ -37,13 +39,14 @@ export default {
     },
     placeholder: {
       type: String,
-      default: '输入关键词搜索商品'
+      default: '复制商品标题或链接，领优惠券再返利'
     },
     focus: {
       type: Boolean,
       default: false
     },
-    url: String
+    url: String,
+    boxStyle: String
   },
   data () {
     return {
@@ -100,24 +103,21 @@ export default {
 }
 </script>
 
-<style lang="less">
-@color: #FF2C23;
-
+<style>
 .x-search-box {
   position: relative;
   height: 36px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: .16rem .24rem;
   box-sizing: border-box;
   background: white;
-  border: 1px solid @color;
+  border: 1px solid #FF2C23;
   border-radius: 18px;
   overflow: hidden;
 }
 .x-search-area {
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   height: 100%;
   flex: 1;
@@ -191,7 +191,7 @@ export default {
 }
 .x-search-btn {
   font-size: 14px;
-  color: @color;
+  color: #FF2C23;
   width: 1.09rem;
   padding: 0;
   height: 32px;

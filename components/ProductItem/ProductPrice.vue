@@ -23,24 +23,24 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .x-product-price {
   display: inline-block;
   font-size: .4rem;
   font-weight: 500;
   color: #FE3C4A;
   line-height: normal;
-  span {
-    font-size: .24rem;
-    color: #999;
-    font-weight: normal;
-    vertical-align: middle;
-  }
-  i {
-    font-style: normal;
-    font-size: .24rem;
-    display: inline-block;
-    transform: scale(.92) translateY(4%);
-  }
+}
+.x-product-price span {
+  font-size: .24rem;
+  color: #999;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.x-product-price i {
+  font-style: normal;
+  font-size: .24rem;
+  display: inline-block;
+  transform: scale(.92) translateY(4%);
 }
 </style>

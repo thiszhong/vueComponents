@@ -1,10 +1,12 @@
 <template>
-  <div @click="onClick" class="x-imgage-text">
-    <div v-if="image" class="x-it-image" :style="imgStyle">
-      <img :src="image" alt="">
-    </div>
-    <div v-if="!onlyImage" class="x-it-text" :style="textStyle">
-      <p>{{text}}</p>
+  <div style="padding: .16rem .24rem;">
+    <div @click="onClick" class="x-imgage-text">
+      <div v-if="image" class="x-it-image" :style="imgStyle">
+        <img :src="image" alt="">
+      </div>
+      <div v-if="!onlyImage" class="x-it-text" :style="textStyle">
+        <p>{{text}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -19,7 +21,7 @@ export default {
     },
     image: {
       type: String,
-      default: require('../../src/assets/image-placeholder.jpg')
+      default: require('../../src/assets/placeholder/ph-image.png')
     },
     text: {
       type: String,
@@ -41,11 +43,10 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .x-imgage-text {
   font-size: .3rem;
   color: #333;
-  margin: .16rem .24rem;
   box-sizing: border-box;
   background: white;
   border-radius: .16rem;
@@ -62,18 +63,18 @@ export default {
 }
 .x-it-text {
   padding: 8px 14px;
-  p {
-    font-weight: 700;
-    line-height: 20px;
-    height: 40px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    text-overflow: ellipsis;
-  }
+}
+.x-it-text p {
+  font-weight: 700;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  text-overflow: ellipsis;
 }
 </style>
 

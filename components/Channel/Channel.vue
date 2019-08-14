@@ -54,9 +54,9 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .x-channel {
-  margin: .16rem .24rem;
+  padding: .16rem .24rem;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -70,7 +70,8 @@ export default {
   flex-direction: column;
 }
 .x-channel-item {
-  display: inline-block; // 万一flex不兼容，还能保持个基本队形
+  /* 万一flex不兼容，还能保持个基本队形 */
+  display: inline-block;
   position: relative;
   height: 0;
   border-radius: 4px;
@@ -81,7 +82,7 @@ export default {
   height: 0;
   padding-bottom: 0.8%;
 }
-// % 基准是innerWidth，UI=702
+/* % 基准是innerWidth，UI=702 */
 .x-channel-item-w348h348 {
   width: 49.6%;
   padding-bottom: 49.6%;
@@ -94,7 +95,7 @@ export default {
   width: 32.8%;
   padding-bottom: 35.6%;
 }
-// % 基准是1，自身宽度
+/* % 基准是1，自身宽度 */
 .x-channel-item-w348h172wrapped {
   width: 100%;
   padding-bottom: 49.4%;
@@ -105,10 +106,10 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
+}
+.x-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>

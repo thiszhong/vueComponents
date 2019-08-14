@@ -19,28 +19,28 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .x-product-title {
   height: .44rem;
   display: flex;
   align-items: center;
   width: 100%;
-  img {
-    width: .32rem;
-    height: .32rem;
-    vertical-align: middle;
-    margin-right: 4px;
-  }
-  h4 {
-    color: #333;
-    margin: 0;
-    font-size: .3rem;
-    font-weight: 500;
-    line-height: normal;
-    flex: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+}
+.x-product-title img {
+  width: .32rem;
+  height: .32rem;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.x-product-title h4 {
+  color: #333;
+  margin: 0;
+  font-size: .3rem;
+  font-weight: 500;
+  line-height: normal;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>
