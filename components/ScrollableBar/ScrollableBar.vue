@@ -1,5 +1,5 @@
 <template>
-  <div class="x-scroll-bar" :class="{'xs_pc_env': isPc}">
+  <div class="x-scroll-bar">
     <div class="x-scroll" ref="xScroll">
       <template v-for="(item, index) in list">
         <div 
@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      isPc: !(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)),
+      // isPc: !(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)),
       activeIndex: 0
     }
   },
