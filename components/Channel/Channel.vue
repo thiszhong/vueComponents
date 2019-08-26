@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     itemClick (index) {
-      this.$emit('click', this.list[index])
+      this.$emit('click', this.list[index], index)
     }
   }
 }
