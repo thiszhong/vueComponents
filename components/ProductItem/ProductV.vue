@@ -17,7 +17,7 @@
         <ProductZhuan :value="item.fl_commission" />
       </div>
       <div class="flex_r_sb x-pv-price-line">
-        <ProductPrice :value="item.discount_price" />
+        <ProductPrice :value="item.discount_price" :lite="item.coupon_money_text" />
         <ProductQuan :value="item.coupon_money_text" />
       </div>
       <div class="flex_r_sb x-pv-line">

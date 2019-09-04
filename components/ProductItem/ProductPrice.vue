@@ -1,6 +1,6 @@
 <template>
   <div class="x-product-price">
-    <span v-if="!lite">{{value ? '券后' : ''}}</span><i>&yen;</i>{{value}}
+    <span v-if="!lite">券后</span><i>&yen;</i>{{value}}
   </div>
 </template>
 
