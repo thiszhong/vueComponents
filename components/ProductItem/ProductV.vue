@@ -21,7 +21,8 @@
         <ProductQuan :value="item.coupon_money_text" />
       </div>
       <div class="flex_r_sb x-pv-line">
-        <ProductText :value="`&yen;${item.price}`" line-through />
+        <span v-if="!item.coupon_money_text"></span>
+        <ProductText v-else :value="`&yen;${item.price}`" line-through />
         <ProductText :value="`销量：${item.month_sales}`" />
       </div>
     </div>
